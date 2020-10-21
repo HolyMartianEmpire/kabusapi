@@ -18,6 +18,8 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
 利用時には、BasePathを指定してください。
 (yamlを改変して設定不要にしようかと思いましたが、検証用は別ポートのようなのでやめました。)
 
+注) 現時点でOrdersSuccessが変換できてないようです。そのため、OrdersGetはobjectが返されています。
+
 ```csharp
     //本番用
     Configuration config = new Configuration();
@@ -33,4 +35,8 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
     var apiInstance = new AuthApi(config);
     var req = new RequestToken(); // RequestToken
 ```
+
+レスポンスのパラメータの一部(nullになる可能性があるモノ)についてはエラーになります。
+
+nulltableにしましょう(double → double?)
 
