@@ -94,7 +94,7 @@ No authorization required
 
 <a name="ordersget"></a>
 # **OrdersGet**
-> List&lt;Object&gt; OrdersGet (string X_API_KEY, string product = null)
+> OrdersSuccess OrdersGet (string X_API_KEY, string product = null)
 
 注文約定照会
 
@@ -123,7 +123,7 @@ namespace Example
             try
             {
                 // 注文約定照会
-                List<Object> result = apiInstance.OrdersGet(X_API_KEY, product);
+                OrdersSuccess result = apiInstance.OrdersGet(X_API_KEY, product);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**List<Object>**
+[**OrdersSuccess**](OrdersSuccess.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 
 <a name="positionsget"></a>
 # **PositionsGet**
-> List&lt;Object&gt; PositionsGet (string X_API_KEY, string product = null)
+> PositionsSuccess PositionsGet (string X_API_KEY, string product = null)
 
 残高照会
 
@@ -203,7 +203,7 @@ namespace Example
             try
             {
                 // 残高照会
-                List<Object> result = apiInstance.PositionsGet(X_API_KEY, product);
+                PositionsSuccess result = apiInstance.PositionsGet(X_API_KEY, product);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**List<Object>**
+[**PositionsSuccess**](PositionsSuccess.md)
 
 ### Authorization
 

@@ -60,8 +60,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
-        /// <returns>List&lt;Object&gt;</returns>
-        List<Object> OrdersGet(string X_API_KEY, string product = default(string));
+        /// <returns>OrdersSuccess</returns>
+        OrdersSuccess OrdersGet(string X_API_KEY, string product = default(string));
 
         /// <summary>
         /// 注文約定照会
@@ -72,8 +72,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
-        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        ApiResponse<List<Object>> OrdersGetWithHttpInfo(string X_API_KEY, string product = default(string));
+        /// <returns>ApiResponse of OrdersSuccess</returns>
+        ApiResponse<OrdersSuccess> OrdersGetWithHttpInfo(string X_API_KEY, string product = default(string));
         /// <summary>
         /// 残高照会
         /// </summary>
@@ -83,8 +83,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
-        /// <returns>List&lt;Object&gt;</returns>
-        List<Object> PositionsGet(string X_API_KEY, string product = default(string));
+        /// <returns>PositionsSuccess</returns>
+        PositionsSuccess PositionsGet(string X_API_KEY, string product = default(string));
 
         /// <summary>
         /// 残高照会
@@ -95,8 +95,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
-        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        ApiResponse<List<Object>> PositionsGetWithHttpInfo(string X_API_KEY, string product = default(string));
+        /// <returns>ApiResponse of PositionsSuccess</returns>
+        ApiResponse<PositionsSuccess> PositionsGetWithHttpInfo(string X_API_KEY, string product = default(string));
         /// <summary>
         /// 銘柄情報
         /// </summary>
@@ -168,8 +168,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;Object&gt;</returns>
-        System.Threading.Tasks.Task<List<Object>> OrdersGetAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of OrdersSuccess</returns>
+        System.Threading.Tasks.Task<OrdersSuccess> OrdersGetAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 注文約定照会
@@ -181,8 +181,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Object>>> OrdersGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (OrdersSuccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrdersSuccess>> OrdersGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 残高照会
         /// </summary>
@@ -193,8 +193,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;Object&gt;</returns>
-        System.Threading.Tasks.Task<List<Object>> PositionsGetAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PositionsSuccess</returns>
+        System.Threading.Tasks.Task<PositionsSuccess> PositionsGetAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 残高照会
@@ -206,8 +206,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Object>>> PositionsGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PositionsSuccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PositionsSuccess>> PositionsGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 銘柄情報
         /// </summary>
@@ -504,10 +504,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
-        /// <returns>List&lt;Object&gt;</returns>
-        public List<Object> OrdersGet(string X_API_KEY, string product = default(string))
+        /// <returns>OrdersSuccess</returns>
+        public OrdersSuccess OrdersGet(string X_API_KEY, string product = default(string))
         {
-            Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = OrdersGetWithHttpInfo(X_API_KEY, product);
+            Org.OpenAPITools.Client.ApiResponse<OrdersSuccess> localVarResponse = OrdersGetWithHttpInfo(X_API_KEY, product);
             return localVarResponse.Data;
         }
 
@@ -517,8 +517,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
-        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse<List<Object>> OrdersGetWithHttpInfo(string X_API_KEY, string product = default(string))
+        /// <returns>ApiResponse of OrdersSuccess</returns>
+        public Org.OpenAPITools.Client.ApiResponse<OrdersSuccess> OrdersGetWithHttpInfo(string X_API_KEY, string product = default(string))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -548,7 +548,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<Object>>("/orders", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<OrdersSuccess>("/orders", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -566,10 +566,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;Object&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Object>> OrdersGetAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of OrdersSuccess</returns>
+        public async System.Threading.Tasks.Task<OrdersSuccess> OrdersGetAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = await OrdersGetWithHttpInfoAsync(X_API_KEY, product, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<OrdersSuccess> localVarResponse = await OrdersGetWithHttpInfoAsync(X_API_KEY, product, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -580,8 +580,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<Object>>> OrdersGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (OrdersSuccess)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrdersSuccess>> OrdersGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -614,7 +614,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Object>>("/orders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OrdersSuccess>("/orders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -631,10 +631,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
-        /// <returns>List&lt;Object&gt;</returns>
-        public List<Object> PositionsGet(string X_API_KEY, string product = default(string))
+        /// <returns>PositionsSuccess</returns>
+        public PositionsSuccess PositionsGet(string X_API_KEY, string product = default(string))
         {
-            Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = PositionsGetWithHttpInfo(X_API_KEY, product);
+            Org.OpenAPITools.Client.ApiResponse<PositionsSuccess> localVarResponse = PositionsGetWithHttpInfo(X_API_KEY, product);
             return localVarResponse.Data;
         }
 
@@ -644,8 +644,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
-        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        public Org.OpenAPITools.Client.ApiResponse<List<Object>> PositionsGetWithHttpInfo(string X_API_KEY, string product = default(string))
+        /// <returns>ApiResponse of PositionsSuccess</returns>
+        public Org.OpenAPITools.Client.ApiResponse<PositionsSuccess> PositionsGetWithHttpInfo(string X_API_KEY, string product = default(string))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -675,7 +675,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<Object>>("/positions", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PositionsSuccess>("/positions", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -693,10 +693,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;Object&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Object>> PositionsGetAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PositionsSuccess</returns>
+        public async System.Threading.Tasks.Task<PositionsSuccess> PositionsGetAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<List<Object>> localVarResponse = await PositionsGetWithHttpInfoAsync(X_API_KEY, product, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<PositionsSuccess> localVarResponse = await PositionsGetWithHttpInfoAsync(X_API_KEY, product, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -707,8 +707,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 |定義値|説明| |-|-| |0|すべて| |1|現物| |2|信用| (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<Object>>> PositionsGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PositionsSuccess)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PositionsSuccess>> PositionsGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -741,7 +741,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<Object>>("/positions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PositionsSuccess>("/positions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
