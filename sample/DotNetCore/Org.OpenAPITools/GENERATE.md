@@ -39,5 +39,5 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
 
 レスポンスのパラメータの一部(nullになる可能性があるモノ)についてはエラーになります。
 
-nulltableにしましょう(double → double?)
+nullableにしましょう(double → double?)
 
