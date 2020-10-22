@@ -19,7 +19,7 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
 利用時には、BasePathを指定してください。
 (yamlを改変して設定不要にしようかと思いましたが、検証用は別ポートのようなのでやめました。)
 
-注) 現時点でOrdersSuccessがうまく変換できてないようです。
+注) 現時点でOrdersSuccess/PositionsSuccessがうまく変換できてないようです。
 
 ```csharp
     //本番用
