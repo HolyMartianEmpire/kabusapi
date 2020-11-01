@@ -10,6 +10,7 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
   -g csharp-netcore \
   --skip-validate-spec \
   --additional-properties optionalEmitDefaultValues=true \
+  --additional-properties generateAliasAsModel=true \
   -o /local/sample/DotNetCore/Org.OpenAPITools
 ```
 
@@ -18,7 +19,7 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
 利用時には、BasePathを指定してください。
 (yamlを改変して設定不要にしようかと思いましたが、検証用は別ポートのようなのでやめました。)
 
-注) 現時点でOrdersSuccessが変換できてないようです。そのため、OrdersGetはobjectが返されています。
+注) 現時点でOrdersSuccess/PositionsSuccessがうまく変換できてないようです。
 
 ```csharp
     //本番用
@@ -38,5 +39,5 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
 
 レスポンスのパラメータの一部(nullになる可能性があるモノ)についてはエラーになります。
 
-nulltableにしましょう(double → double?)
+nullableにしましょう(double → double?)
 
