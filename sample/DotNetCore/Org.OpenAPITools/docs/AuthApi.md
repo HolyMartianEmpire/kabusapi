@@ -1,6 +1,6 @@
 # Org.OpenAPITools.Api.AuthApi
 
-All URIs are relative to *http://localhost/kabusapi*
+All URIs are relative to *http://localhost:18080/kabusapi*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="tokenpost"></a>
 # **TokenPost**
-> TokenSuccess TokenPost (RequestToken req)
+> TokenSuccess TokenPost (RequestToken requestToken)
 
 トークン発行
 
@@ -30,14 +30,14 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new AuthApi(config);
-            var req = new RequestToken(); // RequestToken | 
+            var requestToken = new RequestToken(); // RequestToken | 
 
             try
             {
                 // トークン発行
-                TokenSuccess result = apiInstance.TokenPost(req);
+                TokenSuccess result = apiInstance.TokenPost(requestToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -55,7 +55,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **req** | [**RequestToken**](RequestToken.md)|  | 
+ **requestToken** | [**RequestToken**](RequestToken.md)|  | 
 
 ### Return type
 

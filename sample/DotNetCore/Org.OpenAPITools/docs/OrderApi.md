@@ -1,6 +1,6 @@
 # Org.OpenAPITools.Api.OrderApi
 
-All URIs are relative to *http://localhost/kabusapi*
+All URIs are relative to *http://localhost:18080/kabusapi*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="cancelorderput"></a>
 # **CancelorderPut**
-> OrderSuccess CancelorderPut (string X_API_KEY, RequestCancelOrder req)
+> OrderSuccess CancelorderPut (string X_API_KEY, RequestCancelOrder requestCancelOrder)
 
 注文取消
 
@@ -33,15 +33,15 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new OrderApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var req = new RequestCancelOrder(); // RequestCancelOrder | 
+            var requestCancelOrder = new RequestCancelOrder(); // RequestCancelOrder | 
 
             try
             {
                 // 注文取消
-                OrderSuccess result = apiInstance.CancelorderPut(X_API_KEY, req);
+                OrderSuccess result = apiInstance.CancelorderPut(X_API_KEY, requestCancelOrder);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **req** | [**RequestCancelOrder**](RequestCancelOrder.md)|  | 
+ **requestCancelOrder** | [**RequestCancelOrder**](RequestCancelOrder.md)|  | 
 
 ### Return type
 
@@ -93,7 +93,7 @@ No authorization required
 
 <a name="sendorderfuturepost"></a>
 # **SendorderFuturePost**
-> OrderSuccess SendorderFuturePost (string X_API_KEY, RequestSendOrderDerivFuture req)
+> OrderSuccess SendorderFuturePost (string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture)
 
 注文発注（先物）
 
@@ -114,15 +114,15 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new OrderApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var req = new RequestSendOrderDerivFuture(); // RequestSendOrderDerivFuture | 
+            var requestSendOrderDerivFuture = new RequestSendOrderDerivFuture(); // RequestSendOrderDerivFuture | 
 
             try
             {
                 // 注文発注（先物）
-                OrderSuccess result = apiInstance.SendorderFuturePost(X_API_KEY, req);
+                OrderSuccess result = apiInstance.SendorderFuturePost(X_API_KEY, requestSendOrderDerivFuture);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -141,7 +141,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **req** | [**RequestSendOrderDerivFuture**](RequestSendOrderDerivFuture.md)|  | 
+ **requestSendOrderDerivFuture** | [**RequestSendOrderDerivFuture**](RequestSendOrderDerivFuture.md)|  | 
 
 ### Return type
 
@@ -174,7 +174,7 @@ No authorization required
 
 <a name="sendorderoptionpost"></a>
 # **SendorderOptionPost**
-> OrderSuccess SendorderOptionPost (string X_API_KEY, RequestSendOrderDerivOption req)
+> OrderSuccess SendorderOptionPost (string X_API_KEY, RequestSendOrderDerivOption requestSendOrderDerivOption)
 
 注文発注（オプション）
 
@@ -195,15 +195,15 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new OrderApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var req = new RequestSendOrderDerivOption(); // RequestSendOrderDerivOption | 
+            var requestSendOrderDerivOption = new RequestSendOrderDerivOption(); // RequestSendOrderDerivOption | 
 
             try
             {
                 // 注文発注（オプション）
-                OrderSuccess result = apiInstance.SendorderOptionPost(X_API_KEY, req);
+                OrderSuccess result = apiInstance.SendorderOptionPost(X_API_KEY, requestSendOrderDerivOption);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -222,7 +222,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **req** | [**RequestSendOrderDerivOption**](RequestSendOrderDerivOption.md)|  | 
+ **requestSendOrderDerivOption** | [**RequestSendOrderDerivOption**](RequestSendOrderDerivOption.md)|  | 
 
 ### Return type
 
@@ -255,7 +255,7 @@ No authorization required
 
 <a name="sendorderpost"></a>
 # **SendorderPost**
-> OrderSuccess SendorderPost (string X_API_KEY, RequestSendOrder req)
+> OrderSuccess SendorderPost (string X_API_KEY, RequestSendOrder requestSendOrder)
 
 注文発注（現物・信用）
 
@@ -276,15 +276,15 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new OrderApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var req = new RequestSendOrder(); // RequestSendOrder | 
+            var requestSendOrder = new RequestSendOrder(); // RequestSendOrder | 
 
             try
             {
                 // 注文発注（現物・信用）
-                OrderSuccess result = apiInstance.SendorderPost(X_API_KEY, req);
+                OrderSuccess result = apiInstance.SendorderPost(X_API_KEY, requestSendOrder);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -303,7 +303,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **req** | [**RequestSendOrder**](RequestSendOrder.md)|  | 
+ **requestSendOrder** | [**RequestSendOrder**](RequestSendOrder.md)|  | 
 
 ### Return type
 

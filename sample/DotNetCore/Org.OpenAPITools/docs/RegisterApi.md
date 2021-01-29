@@ -1,6 +1,6 @@
 # Org.OpenAPITools.Api.RegisterApi
 
-All URIs are relative to *http://localhost/kabusapi*
+All URIs are relative to *http://localhost:18080/kabusapi*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="registerput"></a>
 # **RegisterPut**
-> RegistSuccess RegisterPut (string X_API_KEY, RequestRegister req)
+> RegistSuccess RegisterPut (string X_API_KEY, RequestRegister requestRegister)
 
 銘柄登録
 
@@ -32,15 +32,15 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new RegisterApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var req = new RequestRegister(); // RequestRegister | 登録する銘柄のリスト
+            var requestRegister = new RequestRegister(); // RequestRegister | 登録する銘柄のリスト
 
             try
             {
                 // 銘柄登録
-                RegistSuccess result = apiInstance.RegisterPut(X_API_KEY, req);
+                RegistSuccess result = apiInstance.RegisterPut(X_API_KEY, requestRegister);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,7 +59,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **req** | [**RequestRegister**](RequestRegister.md)| 登録する銘柄のリスト | 
+ **requestRegister** | [**RequestRegister**](RequestRegister.md)| 登録する銘柄のリスト | 
 
 ### Return type
 
@@ -113,7 +113,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new RegisterApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
 
@@ -171,7 +171,7 @@ No authorization required
 
 <a name="unregisterput"></a>
 # **UnregisterPut**
-> RegistSuccess UnregisterPut (string X_API_KEY, RequestRegister req)
+> RegistSuccess UnregisterPut (string X_API_KEY, RequestRegister requestRegister)
 
 銘柄登録解除
 
@@ -192,15 +192,15 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new RegisterApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var req = new RequestRegister(); // RequestRegister | 登録解除する銘柄のリスト
+            var requestRegister = new RequestRegister(); // RequestRegister | 登録解除する銘柄のリスト
 
             try
             {
                 // 銘柄登録解除
-                RegistSuccess result = apiInstance.UnregisterPut(X_API_KEY, req);
+                RegistSuccess result = apiInstance.UnregisterPut(X_API_KEY, requestRegister);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -219,7 +219,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **req** | [**RequestRegister**](RequestRegister.md)| 登録解除する銘柄のリスト | 
+ **requestRegister** | [**RequestRegister**](RequestRegister.md)| 登録解除する銘柄のリスト | 
 
 ### Return type
 

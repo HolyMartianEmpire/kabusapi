@@ -100,7 +100,7 @@ namespace Org.OpenAPITools.Client
         public Configuration()
         {
             UserAgent = "OpenAPI-Generator/1.0.0/csharp";
-            BasePath = "http://localhost/kabusapi";
+            BasePath = "http://localhost:18080/kabusapi";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -108,8 +108,14 @@ namespace Org.OpenAPITools.Client
             {
                 {
                     new Dictionary<string, object> {
-                        {"url", "http://localhost/kabusapi"},
-                        {"description", "No description provided"},
+                        {"url", "http://localhost:18080/kabusapi"},
+                        {"description", "本番用"},
+                    }
+                },
+                {
+                    new Dictionary<string, object> {
+                        {"url", "http://localhost:18081/kabusapi"},
+                        {"description", "検証用"},
                     }
                 }
             };
@@ -126,7 +132,7 @@ namespace Org.OpenAPITools.Client
             IDictionary<string, string> defaultHeaders,
             IDictionary<string, string> apiKey,
             IDictionary<string, string> apiKeyPrefix,
-            string basePath = "http://localhost/kabusapi") : this()
+            string basePath = "http://localhost:18080/kabusapi") : this()
         {
             if (string.IsNullOrWhiteSpace(basePath))
                 throw new ArgumentException("The provided basePath is invalid.", "basePath");

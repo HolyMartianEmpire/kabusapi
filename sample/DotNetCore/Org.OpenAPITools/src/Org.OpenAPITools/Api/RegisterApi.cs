@@ -34,9 +34,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録する銘柄のリスト</param>
+        /// <param name="requestRegister">登録する銘柄のリスト</param>
         /// <returns>RegistSuccess</returns>
-        RegistSuccess RegisterPut(string X_API_KEY, RequestRegister req);
+        RegistSuccess RegisterPut(string X_API_KEY, RequestRegister requestRegister);
 
         /// <summary>
         /// 銘柄登録
@@ -46,9 +46,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録する銘柄のリスト</param>
+        /// <param name="requestRegister">登録する銘柄のリスト</param>
         /// <returns>ApiResponse of RegistSuccess</returns>
-        ApiResponse<RegistSuccess> RegisterPutWithHttpInfo(string X_API_KEY, RequestRegister req);
+        ApiResponse<RegistSuccess> RegisterPutWithHttpInfo(string X_API_KEY, RequestRegister requestRegister);
         /// <summary>
         /// 銘柄登録全解除
         /// </summary>
@@ -78,9 +78,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録解除する銘柄のリスト</param>
+        /// <param name="requestRegister">登録解除する銘柄のリスト</param>
         /// <returns>RegistSuccess</returns>
-        RegistSuccess UnregisterPut(string X_API_KEY, RequestRegister req);
+        RegistSuccess UnregisterPut(string X_API_KEY, RequestRegister requestRegister);
 
         /// <summary>
         /// 銘柄登録解除
@@ -90,9 +90,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録解除する銘柄のリスト</param>
+        /// <param name="requestRegister">登録解除する銘柄のリスト</param>
         /// <returns>ApiResponse of RegistSuccess</returns>
-        ApiResponse<RegistSuccess> UnregisterPutWithHttpInfo(string X_API_KEY, RequestRegister req);
+        ApiResponse<RegistSuccess> UnregisterPutWithHttpInfo(string X_API_KEY, RequestRegister requestRegister);
         #endregion Synchronous Operations
     }
 
@@ -110,10 +110,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録する銘柄のリスト</param>
+        /// <param name="requestRegister">登録する銘柄のリスト</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegistSuccess</returns>
-        System.Threading.Tasks.Task<RegistSuccess> RegisterPutAsync(string X_API_KEY, RequestRegister req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RegistSuccess> RegisterPutAsync(string X_API_KEY, RequestRegister requestRegister, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 銘柄登録
@@ -123,10 +123,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録する銘柄のリスト</param>
+        /// <param name="requestRegister">登録する銘柄のリスト</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegistSuccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegistSuccess>> RegisterPutWithHttpInfoAsync(string X_API_KEY, RequestRegister req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RegistSuccess>> RegisterPutWithHttpInfoAsync(string X_API_KEY, RequestRegister requestRegister, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 銘柄登録全解除
         /// </summary>
@@ -158,10 +158,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録解除する銘柄のリスト</param>
+        /// <param name="requestRegister">登録解除する銘柄のリスト</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegistSuccess</returns>
-        System.Threading.Tasks.Task<RegistSuccess> UnregisterPutAsync(string X_API_KEY, RequestRegister req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RegistSuccess> UnregisterPutAsync(string X_API_KEY, RequestRegister requestRegister, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 銘柄登録解除
@@ -171,10 +171,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録解除する銘柄のリスト</param>
+        /// <param name="requestRegister">登録解除する銘柄のリスト</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegistSuccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegistSuccess>> UnregisterPutWithHttpInfoAsync(string X_API_KEY, RequestRegister req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RegistSuccess>> UnregisterPutWithHttpInfoAsync(string X_API_KEY, RequestRegister requestRegister, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -300,11 +300,11 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録する銘柄のリスト</param>
+        /// <param name="requestRegister">登録する銘柄のリスト</param>
         /// <returns>RegistSuccess</returns>
-        public RegistSuccess RegisterPut(string X_API_KEY, RequestRegister req)
+        public RegistSuccess RegisterPut(string X_API_KEY, RequestRegister requestRegister)
         {
-            Org.OpenAPITools.Client.ApiResponse<RegistSuccess> localVarResponse = RegisterPutWithHttpInfo(X_API_KEY, req);
+            Org.OpenAPITools.Client.ApiResponse<RegistSuccess> localVarResponse = RegisterPutWithHttpInfo(X_API_KEY, requestRegister);
             return localVarResponse.Data;
         }
 
@@ -313,17 +313,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録する銘柄のリスト</param>
+        /// <param name="requestRegister">登録する銘柄のリスト</param>
         /// <returns>ApiResponse of RegistSuccess</returns>
-        public Org.OpenAPITools.Client.ApiResponse<RegistSuccess> RegisterPutWithHttpInfo(string X_API_KEY, RequestRegister req)
+        public Org.OpenAPITools.Client.ApiResponse<RegistSuccess> RegisterPutWithHttpInfo(string X_API_KEY, RequestRegister requestRegister)
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling RegisterApi->RegisterPut");
 
-            // verify the required parameter 'req' is set
-            if (req == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'req' when calling RegisterApi->RegisterPut");
+            // verify the required parameter 'requestRegister' is set
+            if (requestRegister == null)
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestRegister' when calling RegisterApi->RegisterPut");
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -343,7 +343,7 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("X-API-KEY", Org.OpenAPITools.Client.ClientUtils.ParameterToString(X_API_KEY)); // header parameter
-            localVarRequestOptions.Data = req;
+            localVarRequestOptions.Data = requestRegister;
 
 
             // make the HTTP request
@@ -363,12 +363,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録する銘柄のリスト</param>
+        /// <param name="requestRegister">登録する銘柄のリスト</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegistSuccess</returns>
-        public async System.Threading.Tasks.Task<RegistSuccess> RegisterPutAsync(string X_API_KEY, RequestRegister req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RegistSuccess> RegisterPutAsync(string X_API_KEY, RequestRegister requestRegister, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<RegistSuccess> localVarResponse = await RegisterPutWithHttpInfoAsync(X_API_KEY, req, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<RegistSuccess> localVarResponse = await RegisterPutWithHttpInfoAsync(X_API_KEY, requestRegister, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -377,18 +377,18 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録する銘柄のリスト</param>
+        /// <param name="requestRegister">登録する銘柄のリスト</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegistSuccess)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<RegistSuccess>> RegisterPutWithHttpInfoAsync(string X_API_KEY, RequestRegister req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<RegistSuccess>> RegisterPutWithHttpInfoAsync(string X_API_KEY, RequestRegister requestRegister, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling RegisterApi->RegisterPut");
 
-            // verify the required parameter 'req' is set
-            if (req == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'req' when calling RegisterApi->RegisterPut");
+            // verify the required parameter 'requestRegister' is set
+            if (requestRegister == null)
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestRegister' when calling RegisterApi->RegisterPut");
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -410,7 +410,7 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("X-API-KEY", Org.OpenAPITools.Client.ClientUtils.ParameterToString(X_API_KEY)); // header parameter
-            localVarRequestOptions.Data = req;
+            localVarRequestOptions.Data = requestRegister;
 
 
             // make the HTTP request
@@ -546,11 +546,11 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録解除する銘柄のリスト</param>
+        /// <param name="requestRegister">登録解除する銘柄のリスト</param>
         /// <returns>RegistSuccess</returns>
-        public RegistSuccess UnregisterPut(string X_API_KEY, RequestRegister req)
+        public RegistSuccess UnregisterPut(string X_API_KEY, RequestRegister requestRegister)
         {
-            Org.OpenAPITools.Client.ApiResponse<RegistSuccess> localVarResponse = UnregisterPutWithHttpInfo(X_API_KEY, req);
+            Org.OpenAPITools.Client.ApiResponse<RegistSuccess> localVarResponse = UnregisterPutWithHttpInfo(X_API_KEY, requestRegister);
             return localVarResponse.Data;
         }
 
@@ -559,17 +559,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録解除する銘柄のリスト</param>
+        /// <param name="requestRegister">登録解除する銘柄のリスト</param>
         /// <returns>ApiResponse of RegistSuccess</returns>
-        public Org.OpenAPITools.Client.ApiResponse<RegistSuccess> UnregisterPutWithHttpInfo(string X_API_KEY, RequestRegister req)
+        public Org.OpenAPITools.Client.ApiResponse<RegistSuccess> UnregisterPutWithHttpInfo(string X_API_KEY, RequestRegister requestRegister)
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling RegisterApi->UnregisterPut");
 
-            // verify the required parameter 'req' is set
-            if (req == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'req' when calling RegisterApi->UnregisterPut");
+            // verify the required parameter 'requestRegister' is set
+            if (requestRegister == null)
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestRegister' when calling RegisterApi->UnregisterPut");
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -589,7 +589,7 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("X-API-KEY", Org.OpenAPITools.Client.ClientUtils.ParameterToString(X_API_KEY)); // header parameter
-            localVarRequestOptions.Data = req;
+            localVarRequestOptions.Data = requestRegister;
 
 
             // make the HTTP request
@@ -609,12 +609,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録解除する銘柄のリスト</param>
+        /// <param name="requestRegister">登録解除する銘柄のリスト</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegistSuccess</returns>
-        public async System.Threading.Tasks.Task<RegistSuccess> UnregisterPutAsync(string X_API_KEY, RequestRegister req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RegistSuccess> UnregisterPutAsync(string X_API_KEY, RequestRegister requestRegister, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<RegistSuccess> localVarResponse = await UnregisterPutWithHttpInfoAsync(X_API_KEY, req, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<RegistSuccess> localVarResponse = await UnregisterPutWithHttpInfoAsync(X_API_KEY, requestRegister, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -623,18 +623,18 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="req">登録解除する銘柄のリスト</param>
+        /// <param name="requestRegister">登録解除する銘柄のリスト</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegistSuccess)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<RegistSuccess>> UnregisterPutWithHttpInfoAsync(string X_API_KEY, RequestRegister req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<RegistSuccess>> UnregisterPutWithHttpInfoAsync(string X_API_KEY, RequestRegister requestRegister, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
                 throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling RegisterApi->UnregisterPut");
 
-            // verify the required parameter 'req' is set
-            if (req == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'req' when calling RegisterApi->UnregisterPut");
+            // verify the required parameter 'requestRegister' is set
+            if (requestRegister == null)
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestRegister' when calling RegisterApi->UnregisterPut");
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -656,7 +656,7 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.HeaderParameters.Add("X-API-KEY", Org.OpenAPITools.Client.ClientUtils.ParameterToString(X_API_KEY)); // header parameter
-            localVarRequestOptions.Data = req;
+            localVarRequestOptions.Data = requestRegister;
 
 
             // make the HTTP request

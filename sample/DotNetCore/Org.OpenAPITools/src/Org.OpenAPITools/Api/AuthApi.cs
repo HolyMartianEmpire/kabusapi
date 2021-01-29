@@ -33,9 +33,9 @@ namespace Org.OpenAPITools.Api
         /// APIトークンを発行します。&lt;br&gt; 発行したトークンは有効である限り使用することができ、リクエストごとに発行する必要はありません。&lt;br&gt; 発行されたAPIトークンは以下のタイミングで無効となります。&lt;br&gt; ・kabuステーションを終了した時&lt;br&gt; ・kabuステーションからログアウトした時&lt;br&gt; ・別のトークンが新たに発行された時&lt;br&gt; ※kabuステーションは早朝、強制的にログアウトいたしますのでご留意ください。&lt;br&gt;
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="req"></param>
+        /// <param name="requestToken"></param>
         /// <returns>TokenSuccess</returns>
-        TokenSuccess TokenPost(RequestToken req);
+        TokenSuccess TokenPost(RequestToken requestToken);
 
         /// <summary>
         /// トークン発行
@@ -44,9 +44,9 @@ namespace Org.OpenAPITools.Api
         /// APIトークンを発行します。&lt;br&gt; 発行したトークンは有効である限り使用することができ、リクエストごとに発行する必要はありません。&lt;br&gt; 発行されたAPIトークンは以下のタイミングで無効となります。&lt;br&gt; ・kabuステーションを終了した時&lt;br&gt; ・kabuステーションからログアウトした時&lt;br&gt; ・別のトークンが新たに発行された時&lt;br&gt; ※kabuステーションは早朝、強制的にログアウトいたしますのでご留意ください。&lt;br&gt;
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="req"></param>
+        /// <param name="requestToken"></param>
         /// <returns>ApiResponse of TokenSuccess</returns>
-        ApiResponse<TokenSuccess> TokenPostWithHttpInfo(RequestToken req);
+        ApiResponse<TokenSuccess> TokenPostWithHttpInfo(RequestToken requestToken);
         #endregion Synchronous Operations
     }
 
@@ -63,10 +63,10 @@ namespace Org.OpenAPITools.Api
         /// APIトークンを発行します。&lt;br&gt; 発行したトークンは有効である限り使用することができ、リクエストごとに発行する必要はありません。&lt;br&gt; 発行されたAPIトークンは以下のタイミングで無効となります。&lt;br&gt; ・kabuステーションを終了した時&lt;br&gt; ・kabuステーションからログアウトした時&lt;br&gt; ・別のトークンが新たに発行された時&lt;br&gt; ※kabuステーションは早朝、強制的にログアウトいたしますのでご留意ください。&lt;br&gt;
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="req"></param>
+        /// <param name="requestToken"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TokenSuccess</returns>
-        System.Threading.Tasks.Task<TokenSuccess> TokenPostAsync(RequestToken req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TokenSuccess> TokenPostAsync(RequestToken requestToken, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// トークン発行
@@ -75,10 +75,10 @@ namespace Org.OpenAPITools.Api
         /// APIトークンを発行します。&lt;br&gt; 発行したトークンは有効である限り使用することができ、リクエストごとに発行する必要はありません。&lt;br&gt; 発行されたAPIトークンは以下のタイミングで無効となります。&lt;br&gt; ・kabuステーションを終了した時&lt;br&gt; ・kabuステーションからログアウトした時&lt;br&gt; ・別のトークンが新たに発行された時&lt;br&gt; ※kabuステーションは早朝、強制的にログアウトいたしますのでご留意ください。&lt;br&gt;
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="req"></param>
+        /// <param name="requestToken"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TokenSuccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TokenSuccess>> TokenPostWithHttpInfoAsync(RequestToken req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TokenSuccess>> TokenPostWithHttpInfoAsync(RequestToken requestToken, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -203,11 +203,11 @@ namespace Org.OpenAPITools.Api
         /// トークン発行 APIトークンを発行します。&lt;br&gt; 発行したトークンは有効である限り使用することができ、リクエストごとに発行する必要はありません。&lt;br&gt; 発行されたAPIトークンは以下のタイミングで無効となります。&lt;br&gt; ・kabuステーションを終了した時&lt;br&gt; ・kabuステーションからログアウトした時&lt;br&gt; ・別のトークンが新たに発行された時&lt;br&gt; ※kabuステーションは早朝、強制的にログアウトいたしますのでご留意ください。&lt;br&gt;
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="req"></param>
+        /// <param name="requestToken"></param>
         /// <returns>TokenSuccess</returns>
-        public TokenSuccess TokenPost(RequestToken req)
+        public TokenSuccess TokenPost(RequestToken requestToken)
         {
-            Org.OpenAPITools.Client.ApiResponse<TokenSuccess> localVarResponse = TokenPostWithHttpInfo(req);
+            Org.OpenAPITools.Client.ApiResponse<TokenSuccess> localVarResponse = TokenPostWithHttpInfo(requestToken);
             return localVarResponse.Data;
         }
 
@@ -215,13 +215,13 @@ namespace Org.OpenAPITools.Api
         /// トークン発行 APIトークンを発行します。&lt;br&gt; 発行したトークンは有効である限り使用することができ、リクエストごとに発行する必要はありません。&lt;br&gt; 発行されたAPIトークンは以下のタイミングで無効となります。&lt;br&gt; ・kabuステーションを終了した時&lt;br&gt; ・kabuステーションからログアウトした時&lt;br&gt; ・別のトークンが新たに発行された時&lt;br&gt; ※kabuステーションは早朝、強制的にログアウトいたしますのでご留意ください。&lt;br&gt;
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="req"></param>
+        /// <param name="requestToken"></param>
         /// <returns>ApiResponse of TokenSuccess</returns>
-        public Org.OpenAPITools.Client.ApiResponse<TokenSuccess> TokenPostWithHttpInfo(RequestToken req)
+        public Org.OpenAPITools.Client.ApiResponse<TokenSuccess> TokenPostWithHttpInfo(RequestToken requestToken)
         {
-            // verify the required parameter 'req' is set
-            if (req == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'req' when calling AuthApi->TokenPost");
+            // verify the required parameter 'requestToken' is set
+            if (requestToken == null)
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestToken' when calling AuthApi->TokenPost");
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -240,7 +240,7 @@ namespace Org.OpenAPITools.Api
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = req;
+            localVarRequestOptions.Data = requestToken;
 
 
             // make the HTTP request
@@ -259,12 +259,12 @@ namespace Org.OpenAPITools.Api
         /// トークン発行 APIトークンを発行します。&lt;br&gt; 発行したトークンは有効である限り使用することができ、リクエストごとに発行する必要はありません。&lt;br&gt; 発行されたAPIトークンは以下のタイミングで無効となります。&lt;br&gt; ・kabuステーションを終了した時&lt;br&gt; ・kabuステーションからログアウトした時&lt;br&gt; ・別のトークンが新たに発行された時&lt;br&gt; ※kabuステーションは早朝、強制的にログアウトいたしますのでご留意ください。&lt;br&gt;
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="req"></param>
+        /// <param name="requestToken"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TokenSuccess</returns>
-        public async System.Threading.Tasks.Task<TokenSuccess> TokenPostAsync(RequestToken req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TokenSuccess> TokenPostAsync(RequestToken requestToken, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<TokenSuccess> localVarResponse = await TokenPostWithHttpInfoAsync(req, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<TokenSuccess> localVarResponse = await TokenPostWithHttpInfoAsync(requestToken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -272,14 +272,14 @@ namespace Org.OpenAPITools.Api
         /// トークン発行 APIトークンを発行します。&lt;br&gt; 発行したトークンは有効である限り使用することができ、リクエストごとに発行する必要はありません。&lt;br&gt; 発行されたAPIトークンは以下のタイミングで無効となります。&lt;br&gt; ・kabuステーションを終了した時&lt;br&gt; ・kabuステーションからログアウトした時&lt;br&gt; ・別のトークンが新たに発行された時&lt;br&gt; ※kabuステーションは早朝、強制的にログアウトいたしますのでご留意ください。&lt;br&gt;
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="req"></param>
+        /// <param name="requestToken"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TokenSuccess)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<TokenSuccess>> TokenPostWithHttpInfoAsync(RequestToken req, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<TokenSuccess>> TokenPostWithHttpInfoAsync(RequestToken requestToken, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'req' is set
-            if (req == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'req' when calling AuthApi->TokenPost");
+            // verify the required parameter 'requestToken' is set
+            if (requestToken == null)
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestToken' when calling AuthApi->TokenPost");
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -300,7 +300,7 @@ namespace Org.OpenAPITools.Api
             var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = req;
+            localVarRequestOptions.Data = requestToken;
 
 
             // make the HTTP request

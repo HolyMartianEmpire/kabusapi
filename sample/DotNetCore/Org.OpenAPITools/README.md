@@ -61,14 +61,14 @@ namespace Example
         {
 
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost/kabusapi";
+            config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new AuthApi(config);
-            var req = new RequestToken(); // RequestToken | 
+            var requestToken = new RequestToken(); // RequestToken | 
 
             try
             {
                 // トークン発行
-                TokenSuccess result = apiInstance.TokenPost(req);
+                TokenSuccess result = apiInstance.TokenPost(requestToken);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -86,7 +86,7 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost/kabusapi*
+All URIs are relative to *http://localhost:18080/kabusapi*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 *InfoApi* | [**BoardSymbolexchangeGet**](docs/InfoApi.md#boardsymbolexchangeget) | **GET** /board/{symbol}@{exchange} | 時価情報・板情報
 *InfoApi* | [**OrdersGet**](docs/InfoApi.md#ordersget) | **GET** /orders | 注文約定照会
 *InfoApi* | [**PositionsGet**](docs/InfoApi.md#positionsget) | **GET** /positions | 残高照会
+*InfoApi* | [**RankingGet**](docs/InfoApi.md#rankingget) | **GET** /ranking | 詳細ランキング
 *InfoApi* | [**SymbolSymbolexchangeGet**](docs/InfoApi.md#symbolsymbolexchangeget) | **GET** /symbol/{symbol}@{exchange} | 銘柄情報
 *InfoApi* | [**SymbolnameFutureGet**](docs/InfoApi.md#symbolnamefutureget) | **GET** /symbolname/future | 先物銘柄コード取得
 *InfoApi* | [**SymbolnameOptionGet**](docs/InfoApi.md#symbolnameoptionget) | **GET** /symbolname/option | オプション銘柄コード取得
@@ -138,12 +139,27 @@ Class | Method | HTTP request | Description
  - [Model.BoardSuccessSell7](docs/BoardSuccessSell7.md)
  - [Model.BoardSuccessSell8](docs/BoardSuccessSell8.md)
  - [Model.BoardSuccessSell9](docs/BoardSuccessSell9.md)
+ - [Model.CommonRankingItems](docs/CommonRankingItems.md)
+ - [Model.CommonRankingResponse](docs/CommonRankingResponse.md)
  - [Model.ErrorResponse](docs/ErrorResponse.md)
  - [Model.OrderSuccess](docs/OrderSuccess.md)
  - [Model.OrdersSuccess](docs/OrdersSuccess.md)
  - [Model.Positions](docs/Positions.md)
  - [Model.PositionsDeriv](docs/PositionsDeriv.md)
  - [Model.PositionsSuccess](docs/PositionsSuccess.md)
+ - [Model.RankingByCategoryResponse](docs/RankingByCategoryResponse.md)
+ - [Model.RankingByCategoryResponseRanking](docs/RankingByCategoryResponseRanking.md)
+ - [Model.RankingByMarginResponse](docs/RankingByMarginResponse.md)
+ - [Model.RankingByMarginResponseAllOf](docs/RankingByMarginResponseAllOf.md)
+ - [Model.RankingByMarginResponseAllOfRanking](docs/RankingByMarginResponseAllOfRanking.md)
+ - [Model.RankingByTickCountResponse](docs/RankingByTickCountResponse.md)
+ - [Model.RankingByTickCountResponseAllOf](docs/RankingByTickCountResponseAllOf.md)
+ - [Model.RankingByTradeValueResponse](docs/RankingByTradeValueResponse.md)
+ - [Model.RankingByTradeValueResponseAllOf](docs/RankingByTradeValueResponseAllOf.md)
+ - [Model.RankingByTradeVolumeResponse](docs/RankingByTradeVolumeResponse.md)
+ - [Model.RankingByTradeVolumeResponseAllOf](docs/RankingByTradeVolumeResponseAllOf.md)
+ - [Model.RankingDefaultResponse](docs/RankingDefaultResponse.md)
+ - [Model.RankingDefaultResponseAllOf](docs/RankingDefaultResponseAllOf.md)
  - [Model.RegistSuccess](docs/RegistSuccess.md)
  - [Model.RequestCancelOrder](docs/RequestCancelOrder.md)
  - [Model.RequestRegister](docs/RequestRegister.md)
