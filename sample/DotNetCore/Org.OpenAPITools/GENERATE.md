@@ -2,6 +2,8 @@
 
 OpenAPI Generatorを使用して、自動生成した.NET Core用クライアントです。
 
+(ビルドまでしか確認していません。動作は保証しません。)
+
 生成にはOpenAPI Generator公式のdockerイメージを使用しました。
 
 ```
