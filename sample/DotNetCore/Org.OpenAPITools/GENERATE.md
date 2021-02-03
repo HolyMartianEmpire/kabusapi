@@ -23,7 +23,7 @@ Config.Serversに定義が設定されています。
 **注意**
 - OrdersSuccessが変換できてないようです。そのため、OrdersGetはobjectが返されています。
 - PositionsSuccessが変換できていないようです。そのため、PositionsGetはobjectが返されています。
-- RankingGetはビルド自体ができないため、戻り値をRankingDefaultResponseに固定しています。
+- RankingGetはビルド自体ができないため、戻り値をCommonRankingResponseに固定しています。
 
 ```csharp
     //本番用
