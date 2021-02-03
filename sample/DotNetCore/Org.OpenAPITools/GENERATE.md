@@ -15,15 +15,20 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
 
 "--additional-properties optionalEmitDefaultValues=true"はデフォルト(0)を指定するとパラメータが省略されてしまうのを回避するために設定しています。
 
-利用時には、BasePathを指定してください。
-(yamlを改変して設定不要にしようかと思いましたが、検証用は別ポートのようなのでやめました。)
+検証用には、BasePathを指定してください。
+Config.Serversに定義が設定されています。
+- 本番用：Config.Servers[0]["url"] //デフォルト
+- 検証用：Config.Servers[1]["url"]
 
-注) 現時点でOrdersSuccessが変換できてないようです。そのため、OrdersGetはobjectが返されています。
+**注意**
+- OrdersSuccessが変換できてないようです。そのため、OrdersGetはobjectが返されています。
+- PositionsSuccessが変換できていないようです。そのため、PositionsGetはobjectが返されています。
+- RankingGetはビルド自体ができないため、戻り値をRankingDefaultResponseに固定しています。
 
 ```csharp
     //本番用
     Configuration config = new Configuration();
-    config.BasePath = "http://localhost:18080/kabusapi";
+    //config.BasePath = (string)config.Servers[0]["url"];
     var apiInstance = new AuthApi(config);
     var req = new RequestToken(); // RequestToken
 ```
@@ -31,7 +36,7 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
 ```csharp
     //検証用
     Configuration config = new Configuration();
-    config.BasePath = "http://localhost:18081/kabusapi";
+    config.BasePath = (string)config.Servers[1]["url"];
     var apiInstance = new AuthApi(config);
     var req = new RequestToken(); // RequestToken
 ```
