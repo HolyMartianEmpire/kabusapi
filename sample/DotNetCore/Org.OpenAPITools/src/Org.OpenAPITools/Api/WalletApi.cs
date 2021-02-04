@@ -56,7 +56,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;福証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;札証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>WalletCashSuccess</returns>
         WalletCashSuccess WalletCashSymbolexchangeGet(string X_API_KEY, string symbol, string exchange);
 
@@ -69,7 +69,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;福証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;札証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of WalletCashSuccess</returns>
         ApiResponse<WalletCashSuccess> WalletCashSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange);
         /// <summary>
@@ -102,7 +102,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>WalletFutureSuccess</returns>
         WalletFutureSuccess WalletFutureSymbolexchangeGet(string X_API_KEY, string symbol, string exchange);
 
@@ -115,7 +115,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of WalletFutureSuccess</returns>
         ApiResponse<WalletFutureSuccess> WalletFutureSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange);
         /// <summary>
@@ -148,7 +148,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>WalletMarginSuccess</returns>
         WalletMarginSuccess WalletMarginSymbolexchangeGet(string X_API_KEY, string symbol, string exchange);
 
@@ -161,7 +161,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of WalletMarginSuccess</returns>
         ApiResponse<WalletMarginSuccess> WalletMarginSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange);
         /// <summary>
@@ -194,7 +194,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>WalletOptionSuccess</returns>
         WalletOptionSuccess WalletOptionSymbolexchangeGet(string X_API_KEY, string symbol, string exchange);
 
@@ -207,7 +207,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of WalletOptionSuccess</returns>
         ApiResponse<WalletOptionSuccess> WalletOptionSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange);
         #endregion Synchronous Operations
@@ -251,7 +251,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;福証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;札証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletCashSuccess</returns>
         System.Threading.Tasks.Task<WalletCashSuccess> WalletCashSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -265,7 +265,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;福証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;札証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletCashSuccess)</returns>
         System.Threading.Tasks.Task<ApiResponse<WalletCashSuccess>> WalletCashSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -301,7 +301,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletFutureSuccess</returns>
         System.Threading.Tasks.Task<WalletFutureSuccess> WalletFutureSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -315,7 +315,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletFutureSuccess)</returns>
         System.Threading.Tasks.Task<ApiResponse<WalletFutureSuccess>> WalletFutureSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -351,7 +351,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletMarginSuccess</returns>
         System.Threading.Tasks.Task<WalletMarginSuccess> WalletMarginSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -365,7 +365,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletMarginSuccess)</returns>
         System.Threading.Tasks.Task<ApiResponse<WalletMarginSuccess>> WalletMarginSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -401,7 +401,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletOptionSuccess</returns>
         System.Threading.Tasks.Task<WalletOptionSuccess> WalletOptionSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -415,7 +415,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletOptionSuccess)</returns>
         System.Threading.Tasks.Task<ApiResponse<WalletOptionSuccess>> WalletOptionSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -660,7 +660,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;福証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;札証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>WalletCashSuccess</returns>
         public WalletCashSuccess WalletCashSymbolexchangeGet(string X_API_KEY, string symbol, string exchange)
         {
@@ -674,7 +674,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;福証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;札証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of WalletCashSuccess</returns>
         public Org.OpenAPITools.Client.ApiResponse<WalletCashSuccess> WalletCashSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange)
         {
@@ -729,7 +729,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;福証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;札証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletCashSuccess</returns>
         public async System.Threading.Tasks.Task<WalletCashSuccess> WalletCashSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -744,7 +744,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;福証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;札証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletCashSuccess)</returns>
         public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WalletCashSuccess>> WalletCashSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -918,7 +918,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>WalletFutureSuccess</returns>
         public WalletFutureSuccess WalletFutureSymbolexchangeGet(string X_API_KEY, string symbol, string exchange)
         {
@@ -932,7 +932,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of WalletFutureSuccess</returns>
         public Org.OpenAPITools.Client.ApiResponse<WalletFutureSuccess> WalletFutureSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange)
         {
@@ -987,7 +987,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletFutureSuccess</returns>
         public async System.Threading.Tasks.Task<WalletFutureSuccess> WalletFutureSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -1002,7 +1002,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletFutureSuccess)</returns>
         public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WalletFutureSuccess>> WalletFutureSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -1176,7 +1176,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>WalletMarginSuccess</returns>
         public WalletMarginSuccess WalletMarginSymbolexchangeGet(string X_API_KEY, string symbol, string exchange)
         {
@@ -1190,7 +1190,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of WalletMarginSuccess</returns>
         public Org.OpenAPITools.Client.ApiResponse<WalletMarginSuccess> WalletMarginSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange)
         {
@@ -1245,7 +1245,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletMarginSuccess</returns>
         public async System.Threading.Tasks.Task<WalletMarginSuccess> WalletMarginSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -1260,7 +1260,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;東証&lt;/td&gt;&lt;/tr&gt;     &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;名証&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletMarginSuccess)</returns>
         public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WalletMarginSuccess>> WalletMarginSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -1434,7 +1434,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>WalletOptionSuccess</returns>
         public WalletOptionSuccess WalletOptionSymbolexchangeGet(string X_API_KEY, string symbol, string exchange)
         {
@@ -1448,7 +1448,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of WalletOptionSuccess</returns>
         public Org.OpenAPITools.Client.ApiResponse<WalletOptionSuccess> WalletOptionSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange)
         {
@@ -1503,7 +1503,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletOptionSuccess</returns>
         public async System.Threading.Tasks.Task<WalletOptionSuccess> WalletOptionSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -1518,7 +1518,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt; &lt;thead&gt; &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;日通し&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;日中&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;夜間&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletOptionSuccess)</returns>
         public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WalletOptionSuccess>> WalletOptionSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))

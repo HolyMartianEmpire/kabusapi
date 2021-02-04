@@ -6,12 +6,14 @@ OpenAPI Generatorを使用して、自動生成した.NET Core用クライアン
 
 生成にはOpenAPI Generator公式のdockerイメージを使用しました。
 
+.NET Framework Standard2.0から.net core 3.1へ変更。
+
 ```
 docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
   -i /local/reference/kabu_STATION_API.yaml \
   -g csharp-netcore \
   --skip-validate-spec \
-  --additional-properties optionalEmitDefaultValues=true \
+  --additional-properties=generateAliasAsModel=true,optionalEmitDefaultValues=true,targetFramework=netcoreapp3.1 \
   -o /local/sample/DotNetCore/Org.OpenAPITools
 ```
 

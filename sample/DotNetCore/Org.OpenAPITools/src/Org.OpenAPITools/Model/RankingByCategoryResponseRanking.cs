@@ -35,7 +35,7 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="RankingByCategoryResponseRanking" /> class.
         /// </summary>
         /// <param name="no">順位&lt;br&gt;※ランキング内で同じ順位が返却される場合があります（10位が2件など）.</param>
-        /// <param name="trend">トレンド   &lt;table&gt;   &lt;thead&gt;   &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;内容&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;   &lt;tr&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;対象データ無し&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;過去10営業日より20位以上上昇&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;過去10営業日より1～19位上昇&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;過去10営業日と変わらず&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;過去10営業日より1～19位下落&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;過去10営業日より20位以上下落&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt;   &lt;/table&gt;     .</param>
+        /// <param name="trend">トレンド &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;内容&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;対象データ無し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;過去10営業日より20位以上上昇&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;過去10営業日より1～19位上昇&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;過去10営業日と変わらず&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;過去10営業日より1～19位下落&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;過去10営業日より20位以上下落&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;.</param>
         /// <param name="averageRanking">平均順位&lt;br&gt;※100位以下は「999」となります.</param>
         /// <param name="category">業種コード.</param>
         /// <param name="categoryName">業種名.</param>
@@ -43,7 +43,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="changeRatio">前日比.</param>
         /// <param name="currentPriceTime">時刻&lt;br&gt;HH:mm&lt;br&gt;※日付は返しません.</param>
         /// <param name="changePercentage">騰落率（%）.</param>
-        public RankingByCategoryResponseRanking(int no = default(int), string trend = default(string), decimal averageRanking = default(decimal), string category = default(string), string categoryName = default(string), double currentPrice = default(double), double changeRatio = default(double), string currentPriceTime = default(string), double changePercentage = default(double))
+        public RankingByCategoryResponseRanking(int no = default(int), string trend = default(string), double averageRanking = default(double), string category = default(string), string categoryName = default(string), double currentPrice = default(double), double changeRatio = default(double), string currentPriceTime = default(string), double changePercentage = default(double))
         {
             this.No = no;
             this.Trend = trend;
@@ -64,9 +64,9 @@ namespace Org.OpenAPITools.Model
         public int No { get; set; }
 
         /// <summary>
-        /// トレンド   &lt;table&gt;   &lt;thead&gt;   &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;内容&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;   &lt;tr&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;対象データ無し&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;過去10営業日より20位以上上昇&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;過去10営業日より1～19位上昇&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;過去10営業日と変わらず&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;過去10営業日より1～19位下落&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;過去10営業日より20位以上下落&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt;   &lt;/table&gt;     
+        /// トレンド &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;内容&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;対象データ無し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;過去10営業日より20位以上上昇&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;過去10営業日より1～19位上昇&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;過去10営業日と変わらず&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;過去10営業日より1～19位下落&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;過去10営業日より20位以上下落&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
         /// </summary>
-        /// <value>トレンド   &lt;table&gt;   &lt;thead&gt;   &lt;tr&gt;&lt;th&gt;定義値&lt;/th&gt;&lt;th&gt;内容&lt;/th&gt;&lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;   &lt;tr&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;対象データ無し&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;過去10営業日より20位以上上昇&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;過去10営業日より1～19位上昇&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;過去10営業日と変わらず&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;過去10営業日より1～19位下落&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;過去10営業日より20位以上下落&lt;/td&gt;&lt;/tr&gt;   &lt;/tbody&gt;   &lt;/table&gt;     </value>
+        /// <value>トレンド &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;内容&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;対象データ無し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;過去10営業日より20位以上上昇&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;過去10営業日より1～19位上昇&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;過去10営業日と変わらず&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;過去10営業日より1～19位下落&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;過去10営業日より20位以上下落&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</value>
         [DataMember(Name = "Trend", EmitDefaultValue = true)]
         public string Trend { get; set; }
 
@@ -75,7 +75,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <value>平均順位&lt;br&gt;※100位以下は「999」となります</value>
         [DataMember(Name = "AverageRanking", EmitDefaultValue = true)]
-        public decimal AverageRanking { get; set; }
+        public double AverageRanking { get; set; }
 
         /// <summary>
         /// 業種コード
@@ -146,7 +146,7 @@ namespace Org.OpenAPITools.Model
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>
