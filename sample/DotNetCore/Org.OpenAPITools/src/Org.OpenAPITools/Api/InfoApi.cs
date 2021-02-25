@@ -30,27 +30,25 @@ namespace Org.OpenAPITools.Api
         /// 時価情報・板情報
         /// </summary>
         /// <remarks>
-        /// 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+        /// 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 &lt;br&gt;再度時価情報・板情報APIを実行してください。\&quot;
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>BoardSuccess</returns>
-        BoardSuccess BoardSymbolexchangeGet(string X_API_KEY, string symbol, string exchange);
+        BoardSuccess BoardGet(string X_API_KEY, string symbol);
 
         /// <summary>
         /// 時価情報・板情報
         /// </summary>
         /// <remarks>
-        /// 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+        /// 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 &lt;br&gt;再度時価情報・板情報APIを実行してください。\&quot;
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of BoardSuccess</returns>
-        ApiResponse<BoardSuccess> BoardSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange);
+        ApiResponse<BoardSuccess> BoardGetWithHttpInfo(string X_API_KEY, string symbol);
         /// <summary>
         /// 注文約定照会
         /// </summary>
@@ -67,8 +65,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="state">状態&lt;br&gt; ※指定された状態と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の状態を指定することはできません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;待機（発注待機）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;処理中（発注送信中）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;処理済（発注済・訂正済）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;訂正取消送信中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;終了（発注エラー・取消済・全約定・失効・期限切れ）&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="side">売買区分&lt;br&gt; ※指定された売買区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の売買区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cashmargin">取引区分&lt;br&gt; ※指定された取引区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の取引区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;新規&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;返済&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
-        /// <returns>OrdersSuccess</returns>
-        OrdersSuccess OrdersGet(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string));
+        /// <returns>List&lt;OrdersSuccess&gt;</returns>
+        List<OrdersSuccess> OrdersGet(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string));
 
         /// <summary>
         /// 注文約定照会
@@ -86,8 +84,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="state">状態&lt;br&gt; ※指定された状態と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の状態を指定することはできません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;待機（発注待機）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;処理中（発注送信中）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;処理済（発注済・訂正済）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;訂正取消送信中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;終了（発注エラー・取消済・全約定・失効・期限切れ）&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="side">売買区分&lt;br&gt; ※指定された売買区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の売買区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cashmargin">取引区分&lt;br&gt; ※指定された取引区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の取引区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;新規&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;返済&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
-        /// <returns>ApiResponse of OrdersSuccess</returns>
-        ApiResponse<OrdersSuccess> OrdersGetWithHttpInfo(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string));
+        /// <returns>ApiResponse of List&lt;OrdersSuccess&gt;</returns>
+        ApiResponse<List<OrdersSuccess>> OrdersGetWithHttpInfo(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string));
         /// <summary>
         /// 残高照会
         /// </summary>
@@ -98,8 +96,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;すべて&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;現物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;OP&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="symbol">銘柄コード&lt;br&gt;※指定された銘柄コードと一致するポジションのみレスポンスします。&lt;br&gt;※複数の銘柄コードを指定することはできません。 (optional)</param>
-        /// <returns>PositionsSuccess</returns>
-        PositionsSuccess PositionsGet(string X_API_KEY, string product = default(string), string symbol = default(string));
+        /// <returns>List&lt;PositionsSuccess&gt;</returns>
+        List<PositionsSuccess> PositionsGet(string X_API_KEY, string product = default(string), string symbol = default(string));
 
         /// <summary>
         /// 残高照会
@@ -111,33 +109,33 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;すべて&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;現物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;OP&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="symbol">銘柄コード&lt;br&gt;※指定された銘柄コードと一致するポジションのみレスポンスします。&lt;br&gt;※複数の銘柄コードを指定することはできません。 (optional)</param>
-        /// <returns>ApiResponse of PositionsSuccess</returns>
-        ApiResponse<PositionsSuccess> PositionsGetWithHttpInfo(string X_API_KEY, string product = default(string), string symbol = default(string));
+        /// <returns>ApiResponse of List&lt;PositionsSuccess&gt;</returns>
+        ApiResponse<List<PositionsSuccess>> PositionsGetWithHttpInfo(string X_API_KEY, string product = default(string), string symbol = default(string));
         /// <summary>
         /// 詳細ランキング
         /// </summary>
         /// <remarks>
-        /// 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+        /// 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 &lt;br&gt;その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="type">種別&lt;br&gt; ※信用情報ランキングに「福証」「札証」を指定した場合は、空レスポンスになります &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;値上がり率（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;値下がり率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;売買高上位&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;売買代金&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;TICK回数&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;売買高急増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;7&lt;/td&gt;           &lt;td&gt;売買代金急増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;8&lt;/td&gt;           &lt;td&gt;信用売残増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;9&lt;/td&gt;           &lt;td&gt;信用売残減&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;10&lt;/td&gt;           &lt;td&gt;信用買残増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;11&lt;/td&gt;           &lt;td&gt;信用買残減&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;12&lt;/td&gt;           &lt;td&gt;信用高倍率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;13&lt;/td&gt;           &lt;td&gt;信用低倍率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;14&lt;/td&gt;           &lt;td&gt;業種別値上がり率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;15&lt;/td&gt;           &lt;td&gt;業種別値下がり率&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="exchangeDivision">市場&lt;br&gt; ※業種別値上がり率・値下がり率に市場を指定しても無視されます &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;ALL&lt;/td&gt;           &lt;td&gt;全市場（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T&lt;/td&gt;           &lt;td&gt;東証全体&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T1&lt;/td&gt;           &lt;td&gt;東証一部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T2&lt;/td&gt;           &lt;td&gt;東証二部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TM&lt;/td&gt;           &lt;td&gt;マザーズ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JQ&lt;/td&gt;           &lt;td&gt;JASDAQ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;M&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;FK&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;S&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse</returns>
-        CommonRankingResponse RankingGet(string X_API_KEY, string type, string exchangeDivision);
+        OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse RankingGet(string X_API_KEY, string type, string exchangeDivision);
 
         /// <summary>
         /// 詳細ランキング
         /// </summary>
         /// <remarks>
-        /// 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+        /// 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 &lt;br&gt;その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="type">種別&lt;br&gt; ※信用情報ランキングに「福証」「札証」を指定した場合は、空レスポンスになります &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;値上がり率（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;値下がり率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;売買高上位&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;売買代金&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;TICK回数&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;売買高急増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;7&lt;/td&gt;           &lt;td&gt;売買代金急増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;8&lt;/td&gt;           &lt;td&gt;信用売残増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;9&lt;/td&gt;           &lt;td&gt;信用売残減&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;10&lt;/td&gt;           &lt;td&gt;信用買残増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;11&lt;/td&gt;           &lt;td&gt;信用買残減&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;12&lt;/td&gt;           &lt;td&gt;信用高倍率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;13&lt;/td&gt;           &lt;td&gt;信用低倍率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;14&lt;/td&gt;           &lt;td&gt;業種別値上がり率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;15&lt;/td&gt;           &lt;td&gt;業種別値下がり率&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="exchangeDivision">市場&lt;br&gt; ※業種別値上がり率・値下がり率に市場を指定しても無視されます &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;ALL&lt;/td&gt;           &lt;td&gt;全市場（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T&lt;/td&gt;           &lt;td&gt;東証全体&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T1&lt;/td&gt;           &lt;td&gt;東証一部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T2&lt;/td&gt;           &lt;td&gt;東証二部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TM&lt;/td&gt;           &lt;td&gt;マザーズ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JQ&lt;/td&gt;           &lt;td&gt;JASDAQ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;M&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;FK&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;S&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse</returns>
-        ApiResponse<CommonRankingResponse> RankingGetWithHttpInfo(string X_API_KEY, string type, string exchangeDivision);
+        ApiResponse<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse> RankingGetWithHttpInfo(string X_API_KEY, string type, string exchangeDivision);
         /// <summary>
         /// 銘柄情報
         /// </summary>
@@ -146,10 +144,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>SymbolSuccess</returns>
-        SymbolSuccess SymbolSymbolexchangeGet(string X_API_KEY, string symbol, string exchange);
+        SymbolSuccess SymbolGet(string X_API_KEY, string symbol);
 
         /// <summary>
         /// 銘柄情報
@@ -159,10 +156,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of SymbolSuccess</returns>
-        ApiResponse<SymbolSuccess> SymbolSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange);
+        ApiResponse<SymbolSuccess> SymbolGetWithHttpInfo(string X_API_KEY, string symbol);
         /// <summary>
         /// 先物銘柄コード取得
         /// </summary>
@@ -228,29 +224,27 @@ namespace Org.OpenAPITools.Api
         /// 時価情報・板情報
         /// </summary>
         /// <remarks>
-        /// 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+        /// 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 &lt;br&gt;再度時価情報・板情報APIを実行してください。\&quot;
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BoardSuccess</returns>
-        System.Threading.Tasks.Task<BoardSuccess> BoardSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BoardSuccess> BoardGetAsync(string X_API_KEY, string symbol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 時価情報・板情報
         /// </summary>
         /// <remarks>
-        /// 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+        /// 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 &lt;br&gt;再度時価情報・板情報APIを実行してください。\&quot;
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BoardSuccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BoardSuccess>> BoardSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BoardSuccess>> BoardGetWithHttpInfoAsync(string X_API_KEY, string symbol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 注文約定照会
         /// </summary>
@@ -268,8 +262,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="side">売買区分&lt;br&gt; ※指定された売買区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の売買区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cashmargin">取引区分&lt;br&gt; ※指定された取引区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の取引区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;新規&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;返済&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrdersSuccess</returns>
-        System.Threading.Tasks.Task<OrdersSuccess> OrdersGetAsync(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;OrdersSuccess&gt;</returns>
+        System.Threading.Tasks.Task<List<OrdersSuccess>> OrdersGetAsync(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 注文約定照会
@@ -288,8 +282,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="side">売買区分&lt;br&gt; ※指定された売買区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の売買区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cashmargin">取引区分&lt;br&gt; ※指定された取引区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の取引区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;新規&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;返済&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrdersSuccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrdersSuccess>> OrdersGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;OrdersSuccess&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<OrdersSuccess>>> OrdersGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 残高照会
         /// </summary>
@@ -301,8 +295,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="product">取得する商品 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;すべて&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;現物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;OP&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="symbol">銘柄コード&lt;br&gt;※指定された銘柄コードと一致するポジションのみレスポンスします。&lt;br&gt;※複数の銘柄コードを指定することはできません。 (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PositionsSuccess</returns>
-        System.Threading.Tasks.Task<PositionsSuccess> PositionsGetAsync(string X_API_KEY, string product = default(string), string symbol = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;PositionsSuccess&gt;</returns>
+        System.Threading.Tasks.Task<List<PositionsSuccess>> PositionsGetAsync(string X_API_KEY, string product = default(string), string symbol = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 残高照会
@@ -315,13 +309,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="product">取得する商品 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;すべて&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;現物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;OP&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="symbol">銘柄コード&lt;br&gt;※指定された銘柄コードと一致するポジションのみレスポンスします。&lt;br&gt;※複数の銘柄コードを指定することはできません。 (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PositionsSuccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PositionsSuccess>> PositionsGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), string symbol = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;PositionsSuccess&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PositionsSuccess>>> PositionsGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), string symbol = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 詳細ランキング
         /// </summary>
         /// <remarks>
-        /// 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+        /// 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 &lt;br&gt;その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
@@ -329,13 +323,13 @@ namespace Org.OpenAPITools.Api
         /// <param name="exchangeDivision">市場&lt;br&gt; ※業種別値上がり率・値下がり率に市場を指定しても無視されます &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;ALL&lt;/td&gt;           &lt;td&gt;全市場（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T&lt;/td&gt;           &lt;td&gt;東証全体&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T1&lt;/td&gt;           &lt;td&gt;東証一部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T2&lt;/td&gt;           &lt;td&gt;東証二部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TM&lt;/td&gt;           &lt;td&gt;マザーズ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JQ&lt;/td&gt;           &lt;td&gt;JASDAQ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;M&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;FK&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;S&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse</returns>
-        System.Threading.Tasks.Task<CommonRankingResponse> RankingGetAsync(string X_API_KEY, string type, string exchangeDivision, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse> RankingGetAsync(string X_API_KEY, string type, string exchangeDivision, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 詳細ランキング
         /// </summary>
         /// <remarks>
-        /// 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+        /// 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 &lt;br&gt;その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
@@ -343,7 +337,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exchangeDivision">市場&lt;br&gt; ※業種別値上がり率・値下がり率に市場を指定しても無視されます &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;ALL&lt;/td&gt;           &lt;td&gt;全市場（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T&lt;/td&gt;           &lt;td&gt;東証全体&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T1&lt;/td&gt;           &lt;td&gt;東証一部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T2&lt;/td&gt;           &lt;td&gt;東証二部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TM&lt;/td&gt;           &lt;td&gt;マザーズ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JQ&lt;/td&gt;           &lt;td&gt;JASDAQ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;M&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;FK&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;S&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonRankingResponse>> RankingGetWithHttpInfoAsync(string X_API_KEY, string type, string exchangeDivision, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse>> RankingGetWithHttpInfoAsync(string X_API_KEY, string type, string exchangeDivision, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 銘柄情報
         /// </summary>
@@ -352,11 +346,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SymbolSuccess</returns>
-        System.Threading.Tasks.Task<SymbolSuccess> SymbolSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SymbolSuccess> SymbolGetAsync(string X_API_KEY, string symbol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 銘柄情報
@@ -366,11 +359,10 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SymbolSuccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SymbolSuccess>> SymbolSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SymbolSuccess>> SymbolGetWithHttpInfoAsync(string X_API_KEY, string symbol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 先物銘柄コード取得
         /// </summary>
@@ -548,40 +540,34 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// 時価情報・板情報 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+        /// 時価情報・板情報 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 &lt;br&gt;再度時価情報・板情報APIを実行してください。\&quot;
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>BoardSuccess</returns>
-        public BoardSuccess BoardSymbolexchangeGet(string X_API_KEY, string symbol, string exchange)
+        public BoardSuccess BoardGet(string X_API_KEY, string symbol)
         {
-            Org.OpenAPITools.Client.ApiResponse<BoardSuccess> localVarResponse = BoardSymbolexchangeGetWithHttpInfo(X_API_KEY, symbol, exchange);
+            Org.OpenAPITools.Client.ApiResponse<BoardSuccess> localVarResponse = BoardGetWithHttpInfo(X_API_KEY, symbol);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// 時価情報・板情報 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+        /// 時価情報・板情報 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 &lt;br&gt;再度時価情報・板情報APIを実行してください。\&quot;
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of BoardSuccess</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BoardSuccess> BoardSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange)
+        public Org.OpenAPITools.Client.ApiResponse<BoardSuccess> BoardGetWithHttpInfo(string X_API_KEY, string symbol)
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling InfoApi->BoardSymbolexchangeGet");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling InfoApi->BoardGet");
 
             // verify the required parameter 'symbol' is set
             if (symbol == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'symbol' when calling InfoApi->BoardSymbolexchangeGet");
-
-            // verify the required parameter 'exchange' is set
-            if (exchange == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'exchange' when calling InfoApi->BoardSymbolexchangeGet");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'symbol' when calling InfoApi->BoardGet");
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -600,16 +586,15 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("symbol", Org.OpenAPITools.Client.ClientUtils.ParameterToString(symbol)); // path parameter
-            localVarRequestOptions.PathParameters.Add("exchange", Org.OpenAPITools.Client.ClientUtils.ParameterToString(exchange)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("X-API-KEY", Org.OpenAPITools.Client.ClientUtils.ParameterToString(X_API_KEY)); // header parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<BoardSuccess>("/board/{symbol}@{exchange}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<BoardSuccess>("/board/{symbol}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("BoardSymbolexchangeGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BoardGet", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -617,42 +602,36 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// 時価情報・板情報 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+        /// 時価情報・板情報 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 &lt;br&gt;再度時価情報・板情報APIを実行してください。\&quot;
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BoardSuccess</returns>
-        public async System.Threading.Tasks.Task<BoardSuccess> BoardSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BoardSuccess> BoardGetAsync(string X_API_KEY, string symbol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BoardSuccess> localVarResponse = await BoardSymbolexchangeGetWithHttpInfoAsync(X_API_KEY, symbol, exchange, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<BoardSuccess> localVarResponse = await BoardGetWithHttpInfoAsync(X_API_KEY, symbol, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// 時価情報・板情報 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+        /// 時価情報・板情報 指定した銘柄の時価情報・板情報を取得します&lt;br&gt; レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 &lt;br&gt;再度時価情報・板情報APIを実行してください。\&quot;
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BoardSuccess)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BoardSuccess>> BoardSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BoardSuccess>> BoardGetWithHttpInfoAsync(string X_API_KEY, string symbol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling InfoApi->BoardSymbolexchangeGet");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling InfoApi->BoardGet");
 
             // verify the required parameter 'symbol' is set
             if (symbol == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'symbol' when calling InfoApi->BoardSymbolexchangeGet");
-
-            // verify the required parameter 'exchange' is set
-            if (exchange == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'exchange' when calling InfoApi->BoardSymbolexchangeGet");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'symbol' when calling InfoApi->BoardGet");
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -673,17 +652,16 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("symbol", Org.OpenAPITools.Client.ClientUtils.ParameterToString(symbol)); // path parameter
-            localVarRequestOptions.PathParameters.Add("exchange", Org.OpenAPITools.Client.ClientUtils.ParameterToString(exchange)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("X-API-KEY", Org.OpenAPITools.Client.ClientUtils.ParameterToString(X_API_KEY)); // header parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<BoardSuccess>("/board/{symbol}@{exchange}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BoardSuccess>("/board/{symbol}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("BoardSymbolexchangeGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BoardGet", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -703,10 +681,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="state">状態&lt;br&gt; ※指定された状態と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の状態を指定することはできません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;待機（発注待機）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;処理中（発注送信中）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;処理済（発注済・訂正済）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;訂正取消送信中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;終了（発注エラー・取消済・全約定・失効・期限切れ）&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="side">売買区分&lt;br&gt; ※指定された売買区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の売買区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cashmargin">取引区分&lt;br&gt; ※指定された取引区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の取引区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;新規&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;返済&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
-        /// <returns>OrdersSuccess</returns>
-        public OrdersSuccess OrdersGet(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string))
+        /// <returns>List&lt;OrdersSuccess&gt;</returns>
+        public List<OrdersSuccess> OrdersGet(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrdersSuccess> localVarResponse = OrdersGetWithHttpInfo(X_API_KEY, product, id, updtime, details, symbol, state, side, cashmargin);
+            Org.OpenAPITools.Client.ApiResponse<List<OrdersSuccess>> localVarResponse = OrdersGetWithHttpInfo(X_API_KEY, product, id, updtime, details, symbol, state, side, cashmargin);
             return localVarResponse.Data;
         }
 
@@ -723,8 +701,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="state">状態&lt;br&gt; ※指定された状態と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の状態を指定することはできません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;待機（発注待機）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;処理中（発注送信中）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;処理済（発注済・訂正済）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;訂正取消送信中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;終了（発注エラー・取消済・全約定・失効・期限切れ）&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="side">売買区分&lt;br&gt; ※指定された売買区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の売買区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cashmargin">取引区分&lt;br&gt; ※指定された取引区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の取引区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;新規&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;返済&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
-        /// <returns>ApiResponse of OrdersSuccess</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrdersSuccess> OrdersGetWithHttpInfo(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string))
+        /// <returns>ApiResponse of List&lt;OrdersSuccess&gt;</returns>
+        public Org.OpenAPITools.Client.ApiResponse<List<OrdersSuccess>> OrdersGetWithHttpInfo(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -782,7 +760,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OrdersSuccess>("/orders", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<OrdersSuccess>>("/orders", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -807,10 +785,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="side">売買区分&lt;br&gt; ※指定された売買区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の売買区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cashmargin">取引区分&lt;br&gt; ※指定された取引区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の取引区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;新規&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;返済&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrdersSuccess</returns>
-        public async System.Threading.Tasks.Task<OrdersSuccess> OrdersGetAsync(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;OrdersSuccess&gt;</returns>
+        public async System.Threading.Tasks.Task<List<OrdersSuccess>> OrdersGetAsync(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrdersSuccess> localVarResponse = await OrdersGetWithHttpInfoAsync(X_API_KEY, product, id, updtime, details, symbol, state, side, cashmargin, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<List<OrdersSuccess>> localVarResponse = await OrdersGetWithHttpInfoAsync(X_API_KEY, product, id, updtime, details, symbol, state, side, cashmargin, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -828,8 +806,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="side">売買区分&lt;br&gt; ※指定された売買区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の売買区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cashmargin">取引区分&lt;br&gt; ※指定された取引区分と一致する注文のみレスポンスします。&lt;br&gt; ※フィルタには数字の入力のみ受け付けます。&lt;br&gt; ※複数の取引区分を指定することができません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;新規&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;返済&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrdersSuccess)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrdersSuccess>> OrdersGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;OrdersSuccess&gt;)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<OrdersSuccess>>> OrdersGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), string id = default(string), string updtime = default(string), string details = default(string), string symbol = default(string), string state = default(string), string side = default(string), string cashmargin = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -890,7 +868,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OrdersSuccess>("/orders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<OrdersSuccess>>("/orders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -908,10 +886,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;すべて&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;現物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;OP&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="symbol">銘柄コード&lt;br&gt;※指定された銘柄コードと一致するポジションのみレスポンスします。&lt;br&gt;※複数の銘柄コードを指定することはできません。 (optional)</param>
-        /// <returns>PositionsSuccess</returns>
-        public PositionsSuccess PositionsGet(string X_API_KEY, string product = default(string), string symbol = default(string))
+        /// <returns>List&lt;PositionsSuccess&gt;</returns>
+        public List<PositionsSuccess> PositionsGet(string X_API_KEY, string product = default(string), string symbol = default(string))
         {
-            Org.OpenAPITools.Client.ApiResponse<PositionsSuccess> localVarResponse = PositionsGetWithHttpInfo(X_API_KEY, product, symbol);
+            Org.OpenAPITools.Client.ApiResponse<List<PositionsSuccess>> localVarResponse = PositionsGetWithHttpInfo(X_API_KEY, product, symbol);
             return localVarResponse.Data;
         }
 
@@ -922,8 +900,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="product">取得する商品 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;すべて&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;現物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;OP&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="symbol">銘柄コード&lt;br&gt;※指定された銘柄コードと一致するポジションのみレスポンスします。&lt;br&gt;※複数の銘柄コードを指定することはできません。 (optional)</param>
-        /// <returns>ApiResponse of PositionsSuccess</returns>
-        public Org.OpenAPITools.Client.ApiResponse<PositionsSuccess> PositionsGetWithHttpInfo(string X_API_KEY, string product = default(string), string symbol = default(string))
+        /// <returns>ApiResponse of List&lt;PositionsSuccess&gt;</returns>
+        public Org.OpenAPITools.Client.ApiResponse<List<PositionsSuccess>> PositionsGetWithHttpInfo(string X_API_KEY, string product = default(string), string symbol = default(string))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -957,7 +935,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PositionsSuccess>("/positions", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<PositionsSuccess>>("/positions", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -976,10 +954,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="product">取得する商品 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;すべて&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;現物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;OP&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="symbol">銘柄コード&lt;br&gt;※指定された銘柄コードと一致するポジションのみレスポンスします。&lt;br&gt;※複数の銘柄コードを指定することはできません。 (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PositionsSuccess</returns>
-        public async System.Threading.Tasks.Task<PositionsSuccess> PositionsGetAsync(string X_API_KEY, string product = default(string), string symbol = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;PositionsSuccess&gt;</returns>
+        public async System.Threading.Tasks.Task<List<PositionsSuccess>> PositionsGetAsync(string X_API_KEY, string product = default(string), string symbol = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<PositionsSuccess> localVarResponse = await PositionsGetWithHttpInfoAsync(X_API_KEY, product, symbol, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<List<PositionsSuccess>> localVarResponse = await PositionsGetWithHttpInfoAsync(X_API_KEY, product, symbol, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -991,8 +969,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="product">取得する商品 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;すべて&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;現物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;OP&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; (optional)</param>
         /// <param name="symbol">銘柄コード&lt;br&gt;※指定された銘柄コードと一致するポジションのみレスポンスします。&lt;br&gt;※複数の銘柄コードを指定することはできません。 (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PositionsSuccess)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<PositionsSuccess>> PositionsGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), string symbol = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;PositionsSuccess&gt;)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<List<PositionsSuccess>>> PositionsGetWithHttpInfoAsync(string X_API_KEY, string product = default(string), string symbol = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -1029,7 +1007,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PositionsSuccess>("/positions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PositionsSuccess>>("/positions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1041,28 +1019,28 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// 詳細ランキング 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+        /// 詳細ランキング 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 &lt;br&gt;その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="type">種別&lt;br&gt; ※信用情報ランキングに「福証」「札証」を指定した場合は、空レスポンスになります &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;値上がり率（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;値下がり率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;売買高上位&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;売買代金&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;TICK回数&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;売買高急増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;7&lt;/td&gt;           &lt;td&gt;売買代金急増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;8&lt;/td&gt;           &lt;td&gt;信用売残増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;9&lt;/td&gt;           &lt;td&gt;信用売残減&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;10&lt;/td&gt;           &lt;td&gt;信用買残増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;11&lt;/td&gt;           &lt;td&gt;信用買残減&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;12&lt;/td&gt;           &lt;td&gt;信用高倍率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;13&lt;/td&gt;           &lt;td&gt;信用低倍率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;14&lt;/td&gt;           &lt;td&gt;業種別値上がり率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;15&lt;/td&gt;           &lt;td&gt;業種別値下がり率&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="exchangeDivision">市場&lt;br&gt; ※業種別値上がり率・値下がり率に市場を指定しても無視されます &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;ALL&lt;/td&gt;           &lt;td&gt;全市場（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T&lt;/td&gt;           &lt;td&gt;東証全体&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T1&lt;/td&gt;           &lt;td&gt;東証一部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T2&lt;/td&gt;           &lt;td&gt;東証二部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TM&lt;/td&gt;           &lt;td&gt;マザーズ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JQ&lt;/td&gt;           &lt;td&gt;JASDAQ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;M&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;FK&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;S&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse</returns>
-        public CommonRankingResponse RankingGet(string X_API_KEY, string type, string exchangeDivision)
+        public OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse RankingGet(string X_API_KEY, string type, string exchangeDivision)
         {
-            Org.OpenAPITools.Client.ApiResponse<CommonRankingResponse> localVarResponse = RankingGetWithHttpInfo(X_API_KEY, type, exchangeDivision);
+            Org.OpenAPITools.Client.ApiResponse<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse> localVarResponse = RankingGetWithHttpInfo(X_API_KEY, type, exchangeDivision);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// 詳細ランキング 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+        /// 詳細ランキング 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 &lt;br&gt;その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="type">種別&lt;br&gt; ※信用情報ランキングに「福証」「札証」を指定した場合は、空レスポンスになります &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;値上がり率（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;値下がり率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;売買高上位&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;売買代金&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;TICK回数&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;売買高急増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;7&lt;/td&gt;           &lt;td&gt;売買代金急増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;8&lt;/td&gt;           &lt;td&gt;信用売残増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;9&lt;/td&gt;           &lt;td&gt;信用売残減&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;10&lt;/td&gt;           &lt;td&gt;信用買残増&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;11&lt;/td&gt;           &lt;td&gt;信用買残減&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;12&lt;/td&gt;           &lt;td&gt;信用高倍率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;13&lt;/td&gt;           &lt;td&gt;信用低倍率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;14&lt;/td&gt;           &lt;td&gt;業種別値上がり率&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;15&lt;/td&gt;           &lt;td&gt;業種別値下がり率&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="exchangeDivision">市場&lt;br&gt; ※業種別値上がり率・値下がり率に市場を指定しても無視されます &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;ALL&lt;/td&gt;           &lt;td&gt;全市場（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T&lt;/td&gt;           &lt;td&gt;東証全体&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T1&lt;/td&gt;           &lt;td&gt;東証一部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T2&lt;/td&gt;           &lt;td&gt;東証二部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TM&lt;/td&gt;           &lt;td&gt;マザーズ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JQ&lt;/td&gt;           &lt;td&gt;JASDAQ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;M&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;FK&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;S&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CommonRankingResponse> RankingGetWithHttpInfo(string X_API_KEY, string type, string exchangeDivision)
+        public Org.OpenAPITools.Client.ApiResponse<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse> RankingGetWithHttpInfo(string X_API_KEY, string type, string exchangeDivision)
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -1098,7 +1076,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<CommonRankingResponse>("/ranking", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse>("/ranking", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1110,7 +1088,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// 詳細ランキング 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+        /// 詳細ランキング 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 &lt;br&gt;その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
@@ -1118,14 +1096,14 @@ namespace Org.OpenAPITools.Api
         /// <param name="exchangeDivision">市場&lt;br&gt; ※業種別値上がり率・値下がり率に市場を指定しても無視されます &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;ALL&lt;/td&gt;           &lt;td&gt;全市場（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T&lt;/td&gt;           &lt;td&gt;東証全体&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T1&lt;/td&gt;           &lt;td&gt;東証一部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T2&lt;/td&gt;           &lt;td&gt;東証二部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TM&lt;/td&gt;           &lt;td&gt;マザーズ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JQ&lt;/td&gt;           &lt;td&gt;JASDAQ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;M&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;FK&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;S&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse</returns>
-        public async System.Threading.Tasks.Task<CommonRankingResponse> RankingGetAsync(string X_API_KEY, string type, string exchangeDivision, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse> RankingGetAsync(string X_API_KEY, string type, string exchangeDivision, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CommonRankingResponse> localVarResponse = await RankingGetWithHttpInfoAsync(X_API_KEY, type, exchangeDivision, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse> localVarResponse = await RankingGetWithHttpInfoAsync(X_API_KEY, type, exchangeDivision, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// 詳細ランキング 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+        /// 詳細ランキング 詳細ランキング画面と同様の各種ランキングを返します。 &lt;br&gt;ランキングの対象日はkabuステーションが保持している当日のデータとなります。 &lt;br&gt;※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 &lt;br&gt;その間の詳細ランキングAPIは空レスポンスとなります。 &lt;br&gt;データクリア：平日7:53頃-9:00過ぎ頃 &lt;br&gt;※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
@@ -1133,7 +1111,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="exchangeDivision">市場&lt;br&gt; ※業種別値上がり率・値下がり率に市場を指定しても無視されます &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;ALL&lt;/td&gt;           &lt;td&gt;全市場（デフォルト）&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T&lt;/td&gt;           &lt;td&gt;東証全体&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T1&lt;/td&gt;           &lt;td&gt;東証一部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;T2&lt;/td&gt;           &lt;td&gt;東証二部&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TM&lt;/td&gt;           &lt;td&gt;マザーズ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JQ&lt;/td&gt;           &lt;td&gt;JASDAQ&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;M&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;FK&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;S&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CommonRankingResponse>> RankingGetWithHttpInfoAsync(string X_API_KEY, string type, string exchangeDivision, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse>> RankingGetWithHttpInfoAsync(string X_API_KEY, string type, string exchangeDivision, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
@@ -1172,7 +1150,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CommonRankingResponse>("/ranking", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OneOfRankingDefaultResponseRankingByTickCountResponseRankingByTradeVolumeResponseRankingByTradeValueResponseRankingByMarginResponseRankingByCategoryResponse>("/ranking", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1188,12 +1166,11 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>SymbolSuccess</returns>
-        public SymbolSuccess SymbolSymbolexchangeGet(string X_API_KEY, string symbol, string exchange)
+        public SymbolSuccess SymbolGet(string X_API_KEY, string symbol)
         {
-            Org.OpenAPITools.Client.ApiResponse<SymbolSuccess> localVarResponse = SymbolSymbolexchangeGetWithHttpInfo(X_API_KEY, symbol, exchange);
+            Org.OpenAPITools.Client.ApiResponse<SymbolSuccess> localVarResponse = SymbolGetWithHttpInfo(X_API_KEY, symbol);
             return localVarResponse.Data;
         }
 
@@ -1202,22 +1179,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <returns>ApiResponse of SymbolSuccess</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SymbolSuccess> SymbolSymbolexchangeGetWithHttpInfo(string X_API_KEY, string symbol, string exchange)
+        public Org.OpenAPITools.Client.ApiResponse<SymbolSuccess> SymbolGetWithHttpInfo(string X_API_KEY, string symbol)
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling InfoApi->SymbolSymbolexchangeGet");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling InfoApi->SymbolGet");
 
             // verify the required parameter 'symbol' is set
             if (symbol == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'symbol' when calling InfoApi->SymbolSymbolexchangeGet");
-
-            // verify the required parameter 'exchange' is set
-            if (exchange == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'exchange' when calling InfoApi->SymbolSymbolexchangeGet");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'symbol' when calling InfoApi->SymbolGet");
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -1236,16 +1208,15 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("symbol", Org.OpenAPITools.Client.ClientUtils.ParameterToString(symbol)); // path parameter
-            localVarRequestOptions.PathParameters.Add("exchange", Org.OpenAPITools.Client.ClientUtils.ParameterToString(exchange)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("X-API-KEY", Org.OpenAPITools.Client.ClientUtils.ParameterToString(X_API_KEY)); // header parameter
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<SymbolSuccess>("/symbol/{symbol}@{exchange}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<SymbolSuccess>("/symbol/{symbol}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SymbolSymbolexchangeGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SymbolGet", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -1257,13 +1228,12 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SymbolSuccess</returns>
-        public async System.Threading.Tasks.Task<SymbolSuccess> SymbolSymbolexchangeGetAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SymbolSuccess> SymbolGetAsync(string X_API_KEY, string symbol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SymbolSuccess> localVarResponse = await SymbolSymbolexchangeGetWithHttpInfoAsync(X_API_KEY, symbol, exchange, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<SymbolSuccess> localVarResponse = await SymbolGetWithHttpInfoAsync(X_API_KEY, symbol, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1272,23 +1242,18 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
-        /// <param name="symbol">銘柄コード</param>
-        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
+        /// <param name="symbol">銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SymbolSuccess)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SymbolSuccess>> SymbolSymbolexchangeGetWithHttpInfoAsync(string X_API_KEY, string symbol, string exchange, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SymbolSuccess>> SymbolGetWithHttpInfoAsync(string X_API_KEY, string symbol, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling InfoApi->SymbolSymbolexchangeGet");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling InfoApi->SymbolGet");
 
             // verify the required parameter 'symbol' is set
             if (symbol == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'symbol' when calling InfoApi->SymbolSymbolexchangeGet");
-
-            // verify the required parameter 'exchange' is set
-            if (exchange == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'exchange' when calling InfoApi->SymbolSymbolexchangeGet");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'symbol' when calling InfoApi->SymbolGet");
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -1309,17 +1274,16 @@ namespace Org.OpenAPITools.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("symbol", Org.OpenAPITools.Client.ClientUtils.ParameterToString(symbol)); // path parameter
-            localVarRequestOptions.PathParameters.Add("exchange", Org.OpenAPITools.Client.ClientUtils.ParameterToString(exchange)); // path parameter
             localVarRequestOptions.HeaderParameters.Add("X-API-KEY", Org.OpenAPITools.Client.ClientUtils.ParameterToString(X_API_KEY)); // header parameter
 
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SymbolSuccess>("/symbol/{symbol}@{exchange}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<SymbolSuccess>("/symbol/{symbol}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SymbolSymbolexchangeGet", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SymbolGet", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

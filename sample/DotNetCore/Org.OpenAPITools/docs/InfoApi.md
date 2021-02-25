@@ -4,22 +4,22 @@ All URIs are relative to *http://localhost:18080/kabusapi*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BoardSymbolexchangeGet**](InfoApi.md#boardsymbolexchangeget) | **GET** /board/{symbol}@{exchange} | 時価情報・板情報
+[**BoardGet**](InfoApi.md#boardget) | **GET** /board/{symbol} | 時価情報・板情報
 [**OrdersGet**](InfoApi.md#ordersget) | **GET** /orders | 注文約定照会
 [**PositionsGet**](InfoApi.md#positionsget) | **GET** /positions | 残高照会
 [**RankingGet**](InfoApi.md#rankingget) | **GET** /ranking | 詳細ランキング
-[**SymbolSymbolexchangeGet**](InfoApi.md#symbolsymbolexchangeget) | **GET** /symbol/{symbol}@{exchange} | 銘柄情報
+[**SymbolGet**](InfoApi.md#symbolget) | **GET** /symbol/{symbol} | 銘柄情報
 [**SymbolnameFutureGet**](InfoApi.md#symbolnamefutureget) | **GET** /symbolname/future | 先物銘柄コード取得
 [**SymbolnameOptionGet**](InfoApi.md#symbolnameoptionget) | **GET** /symbolname/option | オプション銘柄コード取得
 
 
-<a name="boardsymbolexchangeget"></a>
-# **BoardSymbolexchangeGet**
-> BoardSuccess BoardSymbolexchangeGet (string X_API_KEY, string symbol, string exchange)
+<a name="boardget"></a>
+# **BoardGet**
+> BoardSuccess BoardGet (string X_API_KEY, string symbol)
 
 時価情報・板情報
 
-指定した銘柄の時価情報・板情報を取得します<br> レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、再度時価情報・板情報APIを実行してください。
+指定した銘柄の時価情報・板情報を取得します<br> レスポンスの一部にnullが発生した場合、該当銘柄を銘柄登録をしてから、 <br>再度時価情報・板情報APIを実行してください。\"
 
 ### Example
 ```csharp
@@ -31,7 +31,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class BoardSymbolexchangeGetExample
+    public class BoardGetExample
     {
         public static void Main()
         {
@@ -39,18 +39,17 @@ namespace Example
             config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new InfoApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var symbol = symbol_example;  // string | 銘柄コード
-            var exchange = exchange_example;  // string | 市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
+            var symbol = symbol_example;  // string | 銘柄コード <br> ※次の形式で入力してください。<br> [銘柄コード]@[市場コード]<br> ※市場コードは下記の定義値から選択してください。  <b>市場コード</b> <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
 
             try
             {
                 // 時価情報・板情報
-                BoardSuccess result = apiInstance.BoardSymbolexchangeGet(X_API_KEY, symbol, exchange);
+                BoardSuccess result = apiInstance.BoardGet(X_API_KEY, symbol);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling InfoApi.BoardSymbolexchangeGet: " + e.Message );
+                Debug.Print("Exception when calling InfoApi.BoardGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -64,8 +63,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **symbol** | **string**| 銘柄コード | 
- **exchange** | **string**| 市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
+ **symbol** | **string**| 銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
 
 ### Return type
 
@@ -98,7 +96,7 @@ No authorization required
 
 <a name="ordersget"></a>
 # **OrdersGet**
-> OrdersSuccess OrdersGet (string X_API_KEY, string product = null, string id = null, string updtime = null, string details = null, string symbol = null, string state = null, string side = null, string cashmargin = null)
+> List&lt;OrdersSuccess&gt; OrdersGet (string X_API_KEY, string product = null, string id = null, string updtime = null, string details = null, string symbol = null, string state = null, string side = null, string cashmargin = null)
 
 注文約定照会
 
@@ -134,7 +132,7 @@ namespace Example
             try
             {
                 // 注文約定照会
-                OrdersSuccess result = apiInstance.OrdersGet(X_API_KEY, product, id, updtime, details, symbol, state, side, cashmargin);
+                List<OrdersSuccess> result = apiInstance.OrdersGet(X_API_KEY, product, id, updtime, details, symbol, state, side, cashmargin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -164,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrdersSuccess**](OrdersSuccess.md)
+[**List&lt;OrdersSuccess&gt;**](OrdersSuccess.md)
 
 ### Authorization
 
@@ -193,7 +191,7 @@ No authorization required
 
 <a name="positionsget"></a>
 # **PositionsGet**
-> PositionsSuccess PositionsGet (string X_API_KEY, string product = null, string symbol = null)
+> List&lt;PositionsSuccess&gt; PositionsGet (string X_API_KEY, string product = null, string symbol = null)
 
 残高照会
 
@@ -223,7 +221,7 @@ namespace Example
             try
             {
                 // 残高照会
-                PositionsSuccess result = apiInstance.PositionsGet(X_API_KEY, product, symbol);
+                List<PositionsSuccess> result = apiInstance.PositionsGet(X_API_KEY, product, symbol);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -247,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PositionsSuccess**](PositionsSuccess.md)
+[**List&lt;PositionsSuccess&gt;**](PositionsSuccess.md)
 
 ### Authorization
 
@@ -280,7 +278,7 @@ No authorization required
 
 詳細ランキング
 
-詳細ランキング画面と同様の各種ランキングを返します。 <br>ランキングの対象日はkabuステーションが保持している当日のデータとなります。 <br>※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、その間の詳細ランキングAPIは空レスポンスとなります。 <br>データクリア：平日7:53頃-9:00過ぎ頃 <br>※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
+詳細ランキング画面と同様の各種ランキングを返します。 <br>ランキングの対象日はkabuステーションが保持している当日のデータとなります。 <br>※株価情報ランキング、業種別指数ランキングは、下記の時間帯でデータがクリアされるため、 <br>その間の詳細ランキングAPIは空レスポンスとなります。 <br>データクリア：平日7:53頃-9:00過ぎ頃 <br>※信用情報ランキングは毎週第３営業日の7:55頃にデータが更新されます。
 
 ### Example
 ```csharp
@@ -357,9 +355,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="symbolsymbolexchangeget"></a>
-# **SymbolSymbolexchangeGet**
-> SymbolSuccess SymbolSymbolexchangeGet (string X_API_KEY, string symbol, string exchange)
+<a name="symbolget"></a>
+# **SymbolGet**
+> SymbolSuccess SymbolGet (string X_API_KEY, string symbol)
 
 銘柄情報
 
@@ -375,7 +373,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class SymbolSymbolexchangeGetExample
+    public class SymbolGetExample
     {
         public static void Main()
         {
@@ -383,18 +381,17 @@ namespace Example
             config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new InfoApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var symbol = symbol_example;  // string | 銘柄コード
-            var exchange = exchange_example;  // string | 市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
+            var symbol = symbol_example;  // string | 銘柄コード <br> ※次の形式で入力してください。<br> [銘柄コード]@[市場コード]<br> ※市場コードは下記の定義値から選択してください。  <b>市場コード</b> <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
 
             try
             {
                 // 銘柄情報
-                SymbolSuccess result = apiInstance.SymbolSymbolexchangeGet(X_API_KEY, symbol, exchange);
+                SymbolSuccess result = apiInstance.SymbolGet(X_API_KEY, symbol);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling InfoApi.SymbolSymbolexchangeGet: " + e.Message );
+                Debug.Print("Exception when calling InfoApi.SymbolGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -408,8 +405,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **symbol** | **string**| 銘柄コード | 
- **exchange** | **string**| 市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
+ **symbol** | **string**| 銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
 
 ### Return type
 

@@ -59,7 +59,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="requestSendOrderDerivFuture"></param>
         /// <returns>OrderSuccess</returns>
-        OrderSuccess SendorderFuturePost(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture);
+        OrderSuccess SendoderFuturePost(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture);
 
         /// <summary>
         /// 注文発注（先物）
@@ -71,7 +71,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="requestSendOrderDerivFuture"></param>
         /// <returns>ApiResponse of OrderSuccess</returns>
-        ApiResponse<OrderSuccess> SendorderFuturePostWithHttpInfo(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture);
+        ApiResponse<OrderSuccess> SendoderFuturePostWithHttpInfo(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture);
         /// <summary>
         /// 注文発注（オプション）
         /// </summary>
@@ -163,7 +163,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="requestSendOrderDerivFuture"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderSuccess</returns>
-        System.Threading.Tasks.Task<OrderSuccess> SendorderFuturePostAsync(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderSuccess> SendoderFuturePostAsync(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 注文発注（先物）
@@ -176,7 +176,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="requestSendOrderDerivFuture"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderSuccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderSuccess>> SendorderFuturePostWithHttpInfoAsync(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderSuccess>> SendoderFuturePostWithHttpInfoAsync(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 注文発注（オプション）
         /// </summary>
@@ -485,9 +485,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="requestSendOrderDerivFuture"></param>
         /// <returns>OrderSuccess</returns>
-        public OrderSuccess SendorderFuturePost(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture)
+        public OrderSuccess SendoderFuturePost(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture)
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderSuccess> localVarResponse = SendorderFuturePostWithHttpInfo(X_API_KEY, requestSendOrderDerivFuture);
+            Org.OpenAPITools.Client.ApiResponse<OrderSuccess> localVarResponse = SendoderFuturePostWithHttpInfo(X_API_KEY, requestSendOrderDerivFuture);
             return localVarResponse.Data;
         }
 
@@ -498,15 +498,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="X_API_KEY">トークン発行メソッドで取得した文字列</param>
         /// <param name="requestSendOrderDerivFuture"></param>
         /// <returns>ApiResponse of OrderSuccess</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OrderSuccess> SendorderFuturePostWithHttpInfo(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture)
+        public Org.OpenAPITools.Client.ApiResponse<OrderSuccess> SendoderFuturePostWithHttpInfo(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture)
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling OrderApi->SendorderFuturePost");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling OrderApi->SendoderFuturePost");
 
             // verify the required parameter 'requestSendOrderDerivFuture' is set
             if (requestSendOrderDerivFuture == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestSendOrderDerivFuture' when calling OrderApi->SendorderFuturePost");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestSendOrderDerivFuture' when calling OrderApi->SendoderFuturePost");
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -534,7 +534,7 @@ namespace Org.OpenAPITools.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SendorderFuturePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SendoderFuturePost", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -549,9 +549,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="requestSendOrderDerivFuture"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderSuccess</returns>
-        public async System.Threading.Tasks.Task<OrderSuccess> SendorderFuturePostAsync(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderSuccess> SendoderFuturePostAsync(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OrderSuccess> localVarResponse = await SendorderFuturePostWithHttpInfoAsync(X_API_KEY, requestSendOrderDerivFuture, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<OrderSuccess> localVarResponse = await SendoderFuturePostWithHttpInfoAsync(X_API_KEY, requestSendOrderDerivFuture, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -563,15 +563,15 @@ namespace Org.OpenAPITools.Api
         /// <param name="requestSendOrderDerivFuture"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderSuccess)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderSuccess>> SendorderFuturePostWithHttpInfoAsync(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OrderSuccess>> SendoderFuturePostWithHttpInfoAsync(string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'X_API_KEY' is set
             if (X_API_KEY == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling OrderApi->SendorderFuturePost");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'X_API_KEY' when calling OrderApi->SendoderFuturePost");
 
             // verify the required parameter 'requestSendOrderDerivFuture' is set
             if (requestSendOrderDerivFuture == null)
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestSendOrderDerivFuture' when calling OrderApi->SendorderFuturePost");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'requestSendOrderDerivFuture' when calling OrderApi->SendoderFuturePost");
 
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -602,7 +602,7 @@ namespace Org.OpenAPITools.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SendorderFuturePost", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SendoderFuturePost", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

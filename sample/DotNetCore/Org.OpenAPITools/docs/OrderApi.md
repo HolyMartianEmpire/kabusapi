@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost:18080/kabusapi*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CancelorderPut**](OrderApi.md#cancelorderput) | **PUT** /cancelorder | 注文取消
-[**SendorderFuturePost**](OrderApi.md#sendorderfuturepost) | **POST** /sendorder/future | 注文発注（先物）
+[**SendoderFuturePost**](OrderApi.md#sendoderfuturepost) | **POST** /sendorder/future | 注文発注（先物）
 [**SendorderOptionPost**](OrderApi.md#sendorderoptionpost) | **POST** /sendorder/option | 注文発注（オプション）
 [**SendorderPost**](OrderApi.md#sendorderpost) | **POST** /sendorder | 注文発注（現物・信用）
 
@@ -91,9 +91,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="sendorderfuturepost"></a>
-# **SendorderFuturePost**
-> OrderSuccess SendorderFuturePost (string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture)
+<a name="sendoderfuturepost"></a>
+# **SendoderFuturePost**
+> OrderSuccess SendoderFuturePost (string X_API_KEY, RequestSendOrderDerivFuture requestSendOrderDerivFuture)
 
 注文発注（先物）
 
@@ -109,7 +109,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class SendorderFuturePostExample
+    public class SendoderFuturePostExample
     {
         public static void Main()
         {
@@ -122,12 +122,12 @@ namespace Example
             try
             {
                 // 注文発注（先物）
-                OrderSuccess result = apiInstance.SendorderFuturePost(X_API_KEY, requestSendOrderDerivFuture);
+                OrderSuccess result = apiInstance.SendoderFuturePost(X_API_KEY, requestSendOrderDerivFuture);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OrderApi.SendorderFuturePost: " + e.Message );
+                Debug.Print("Exception when calling OrderApi.SendoderFuturePost: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

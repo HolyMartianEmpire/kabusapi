@@ -37,7 +37,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="type">種別.</param>
         /// <param name="exchangeDivision">市場.</param>
         /// <param name="ranking">ランキング.</param>
-        public RankingByTradeValueResponse(string type = default(string), string exchangeDivision = default(string), List<CommonRankingItems> ranking = default(List<CommonRankingItems>))
+        public RankingByTradeValueResponse(string type = default(string), string exchangeDivision = default(string), List<RankingByTradeValueResponseRanking> ranking = default(List<RankingByTradeValueResponseRanking>))
         {
             this.Type = type;
             this.ExchangeDivision = exchangeDivision;
@@ -63,7 +63,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <value>ランキング</value>
         [DataMember(Name = "Ranking", EmitDefaultValue = true)]
-        public List<CommonRankingItems> Ranking { get; set; }
+        public List<RankingByTradeValueResponseRanking> Ranking { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -86,7 +86,7 @@ namespace Org.OpenAPITools.Model
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>

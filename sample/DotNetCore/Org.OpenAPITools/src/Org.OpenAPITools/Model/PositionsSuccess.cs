@@ -29,15 +29,203 @@ namespace Org.OpenAPITools.Model
     /// PositionsSuccess
     /// </summary>
     [DataContract(Name = "PositionsSuccess")]
-    public partial class PositionsSuccess : List<Object>, IEquatable<PositionsSuccess>, IValidatableObject
+    public partial class PositionsSuccess : IEquatable<PositionsSuccess>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PositionsSuccess" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        public PositionsSuccess() : base()
+        /// <param name="executionID">約定番号&lt;br&gt;※現物取引では、nullが返ります。.</param>
+        /// <param name="accountType">口座種別 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;一般&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;特定&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;12&lt;/td&gt;           &lt;td&gt;法人&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;.</param>
+        /// <param name="symbol">銘柄コード.</param>
+        /// <param name="symbolName">銘柄名.</param>
+        /// <param name="exchange">市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;.</param>
+        /// <param name="exchangeName">市場名.</param>
+        /// <param name="securityType">銘柄種別&lt;br&gt;※先物・オプション銘柄の場合のみ.</param>
+        /// <param name="executionDay">約定日（建玉日）&lt;br&gt;※信用・先物・オプションの場合のみ&lt;br&gt;※現物取引では、nullが返ります。.</param>
+        /// <param name="price">値段.</param>
+        /// <param name="leavesQty">残数量.</param>
+        /// <param name="holdQty">拘束数量（保有数量）.</param>
+        /// <param name="side">売買区分 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;.</param>
+        /// <param name="expenses">諸経費&lt;br&gt;※信用・先物・オプションの場合のみ.</param>
+        /// <param name="commission">手数料&lt;br&gt;※信用・先物・オプションの場合のみ.</param>
+        /// <param name="commissionTax">手数料消費税&lt;br&gt;※信用・先物・オプションの場合のみ.</param>
+        /// <param name="expireDay">返済期日&lt;br&gt;※信用・先物・オプションの場合のみ.</param>
+        /// <param name="marginTradeType">信用取引区分&lt;br&gt;※信用の場合のみ &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;制度信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;一般信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;一般信用（売短）&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;.</param>
+        /// <param name="currentPrice">現在値.</param>
+        /// <param name="valuation">評価金額.</param>
+        /// <param name="profitLoss">評価損益額.</param>
+        /// <param name="profitLossRate">評価損益率.</param>
+        public PositionsSuccess(string executionID = default(string), int accountType = default(int), string symbol = default(string), string symbolName = default(string), int exchange = default(int), string exchangeName = default(string), int securityType = default(int), int executionDay = default(int), double price = default(double), double leavesQty = default(double), double holdQty = default(double), string side = default(string), double expenses = default(double), double commission = default(double), double commissionTax = default(double), int expireDay = default(int), int marginTradeType = default(int), double currentPrice = default(double), double valuation = default(double), double profitLoss = default(double), double profitLossRate = default(double))
         {
+            this.ExecutionID = executionID;
+            this.AccountType = accountType;
+            this.Symbol = symbol;
+            this.SymbolName = symbolName;
+            this.Exchange = exchange;
+            this.ExchangeName = exchangeName;
+            this.SecurityType = securityType;
+            this.ExecutionDay = executionDay;
+            this.Price = price;
+            this.LeavesQty = leavesQty;
+            this.HoldQty = holdQty;
+            this.Side = side;
+            this.Expenses = expenses;
+            this.Commission = commission;
+            this.CommissionTax = commissionTax;
+            this.ExpireDay = expireDay;
+            this.MarginTradeType = marginTradeType;
+            this.CurrentPrice = currentPrice;
+            this.Valuation = valuation;
+            this.ProfitLoss = profitLoss;
+            this.ProfitLossRate = profitLossRate;
         }
+
+        /// <summary>
+        /// 約定番号&lt;br&gt;※現物取引では、nullが返ります。
+        /// </summary>
+        /// <value>約定番号&lt;br&gt;※現物取引では、nullが返ります。</value>
+        [DataMember(Name = "ExecutionID", EmitDefaultValue = true)]
+        public string ExecutionID { get; set; }
+
+        /// <summary>
+        /// 口座種別 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;一般&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;特定&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;12&lt;/td&gt;           &lt;td&gt;法人&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
+        /// </summary>
+        /// <value>口座種別 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;一般&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;4&lt;/td&gt;           &lt;td&gt;特定&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;12&lt;/td&gt;           &lt;td&gt;法人&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</value>
+        [DataMember(Name = "AccountType", EmitDefaultValue = true)]
+        public int AccountType { get; set; }
+
+        /// <summary>
+        /// 銘柄コード
+        /// </summary>
+        /// <value>銘柄コード</value>
+        [DataMember(Name = "Symbol", EmitDefaultValue = true)]
+        public string Symbol { get; set; }
+
+        /// <summary>
+        /// 銘柄名
+        /// </summary>
+        /// <value>銘柄名</value>
+        [DataMember(Name = "SymbolName", EmitDefaultValue = true)]
+        public string SymbolName { get; set; }
+
+        /// <summary>
+        /// 市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
+        /// </summary>
+        /// <value>市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</value>
+        [DataMember(Name = "Exchange", EmitDefaultValue = true)]
+        public int Exchange { get; set; }
+
+        /// <summary>
+        /// 市場名
+        /// </summary>
+        /// <value>市場名</value>
+        [DataMember(Name = "ExchangeName", EmitDefaultValue = true)]
+        public string ExchangeName { get; set; }
+
+        /// <summary>
+        /// 銘柄種別&lt;br&gt;※先物・オプション銘柄の場合のみ
+        /// </summary>
+        /// <value>銘柄種別&lt;br&gt;※先物・オプション銘柄の場合のみ</value>
+        [DataMember(Name = "SecurityType", EmitDefaultValue = true)]
+        public int SecurityType { get; set; }
+
+        /// <summary>
+        /// 約定日（建玉日）&lt;br&gt;※信用・先物・オプションの場合のみ&lt;br&gt;※現物取引では、nullが返ります。
+        /// </summary>
+        /// <value>約定日（建玉日）&lt;br&gt;※信用・先物・オプションの場合のみ&lt;br&gt;※現物取引では、nullが返ります。</value>
+        [DataMember(Name = "ExecutionDay", EmitDefaultValue = true)]
+        public int ExecutionDay { get; set; }
+
+        /// <summary>
+        /// 値段
+        /// </summary>
+        /// <value>値段</value>
+        [DataMember(Name = "Price", EmitDefaultValue = true)]
+        public double Price { get; set; }
+
+        /// <summary>
+        /// 残数量
+        /// </summary>
+        /// <value>残数量</value>
+        [DataMember(Name = "LeavesQty", EmitDefaultValue = true)]
+        public double LeavesQty { get; set; }
+
+        /// <summary>
+        /// 拘束数量（保有数量）
+        /// </summary>
+        /// <value>拘束数量（保有数量）</value>
+        [DataMember(Name = "HoldQty", EmitDefaultValue = true)]
+        public double HoldQty { get; set; }
+
+        /// <summary>
+        /// 売買区分 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
+        /// </summary>
+        /// <value>売買区分 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;売&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;買&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</value>
+        [DataMember(Name = "Side", EmitDefaultValue = true)]
+        public string Side { get; set; }
+
+        /// <summary>
+        /// 諸経費&lt;br&gt;※信用・先物・オプションの場合のみ
+        /// </summary>
+        /// <value>諸経費&lt;br&gt;※信用・先物・オプションの場合のみ</value>
+        [DataMember(Name = "Expenses", EmitDefaultValue = true)]
+        public double Expenses { get; set; }
+
+        /// <summary>
+        /// 手数料&lt;br&gt;※信用・先物・オプションの場合のみ
+        /// </summary>
+        /// <value>手数料&lt;br&gt;※信用・先物・オプションの場合のみ</value>
+        [DataMember(Name = "Commission", EmitDefaultValue = true)]
+        public double Commission { get; set; }
+
+        /// <summary>
+        /// 手数料消費税&lt;br&gt;※信用・先物・オプションの場合のみ
+        /// </summary>
+        /// <value>手数料消費税&lt;br&gt;※信用・先物・オプションの場合のみ</value>
+        [DataMember(Name = "CommissionTax", EmitDefaultValue = true)]
+        public double CommissionTax { get; set; }
+
+        /// <summary>
+        /// 返済期日&lt;br&gt;※信用・先物・オプションの場合のみ
+        /// </summary>
+        /// <value>返済期日&lt;br&gt;※信用・先物・オプションの場合のみ</value>
+        [DataMember(Name = "ExpireDay", EmitDefaultValue = true)]
+        public int ExpireDay { get; set; }
+
+        /// <summary>
+        /// 信用取引区分&lt;br&gt;※信用の場合のみ &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;制度信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;一般信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;一般信用（売短）&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
+        /// </summary>
+        /// <value>信用取引区分&lt;br&gt;※信用の場合のみ &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;制度信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;一般信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;一般信用（売短）&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;</value>
+        [DataMember(Name = "MarginTradeType", EmitDefaultValue = true)]
+        public int MarginTradeType { get; set; }
+
+        /// <summary>
+        /// 現在値
+        /// </summary>
+        /// <value>現在値</value>
+        [DataMember(Name = "CurrentPrice", EmitDefaultValue = true)]
+        public double CurrentPrice { get; set; }
+
+        /// <summary>
+        /// 評価金額
+        /// </summary>
+        /// <value>評価金額</value>
+        [DataMember(Name = "Valuation", EmitDefaultValue = true)]
+        public double Valuation { get; set; }
+
+        /// <summary>
+        /// 評価損益額
+        /// </summary>
+        /// <value>評価損益額</value>
+        [DataMember(Name = "ProfitLoss", EmitDefaultValue = true)]
+        public double ProfitLoss { get; set; }
+
+        /// <summary>
+        /// 評価損益率
+        /// </summary>
+        /// <value>評価損益率</value>
+        [DataMember(Name = "ProfitLossRate", EmitDefaultValue = true)]
+        public double ProfitLossRate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -47,7 +235,27 @@ namespace Org.OpenAPITools.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PositionsSuccess {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  ExecutionID: ").Append(ExecutionID).Append("\n");
+            sb.Append("  AccountType: ").Append(AccountType).Append("\n");
+            sb.Append("  Symbol: ").Append(Symbol).Append("\n");
+            sb.Append("  SymbolName: ").Append(SymbolName).Append("\n");
+            sb.Append("  Exchange: ").Append(Exchange).Append("\n");
+            sb.Append("  ExchangeName: ").Append(ExchangeName).Append("\n");
+            sb.Append("  SecurityType: ").Append(SecurityType).Append("\n");
+            sb.Append("  ExecutionDay: ").Append(ExecutionDay).Append("\n");
+            sb.Append("  Price: ").Append(Price).Append("\n");
+            sb.Append("  LeavesQty: ").Append(LeavesQty).Append("\n");
+            sb.Append("  HoldQty: ").Append(HoldQty).Append("\n");
+            sb.Append("  Side: ").Append(Side).Append("\n");
+            sb.Append("  Expenses: ").Append(Expenses).Append("\n");
+            sb.Append("  Commission: ").Append(Commission).Append("\n");
+            sb.Append("  CommissionTax: ").Append(CommissionTax).Append("\n");
+            sb.Append("  ExpireDay: ").Append(ExpireDay).Append("\n");
+            sb.Append("  MarginTradeType: ").Append(MarginTradeType).Append("\n");
+            sb.Append("  CurrentPrice: ").Append(CurrentPrice).Append("\n");
+            sb.Append("  Valuation: ").Append(Valuation).Append("\n");
+            sb.Append("  ProfitLoss: ").Append(ProfitLoss).Append("\n");
+            sb.Append("  ProfitLossRate: ").Append(ProfitLossRate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -56,9 +264,9 @@ namespace Org.OpenAPITools.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
@@ -81,7 +289,96 @@ namespace Org.OpenAPITools.Model
             if (input == null)
                 return false;
 
-            return base.Equals(input);
+            return 
+                (
+                    this.ExecutionID == input.ExecutionID ||
+                    (this.ExecutionID != null &&
+                    this.ExecutionID.Equals(input.ExecutionID))
+                ) && 
+                (
+                    this.AccountType == input.AccountType ||
+                    this.AccountType.Equals(input.AccountType)
+                ) && 
+                (
+                    this.Symbol == input.Symbol ||
+                    (this.Symbol != null &&
+                    this.Symbol.Equals(input.Symbol))
+                ) && 
+                (
+                    this.SymbolName == input.SymbolName ||
+                    (this.SymbolName != null &&
+                    this.SymbolName.Equals(input.SymbolName))
+                ) && 
+                (
+                    this.Exchange == input.Exchange ||
+                    this.Exchange.Equals(input.Exchange)
+                ) && 
+                (
+                    this.ExchangeName == input.ExchangeName ||
+                    (this.ExchangeName != null &&
+                    this.ExchangeName.Equals(input.ExchangeName))
+                ) && 
+                (
+                    this.SecurityType == input.SecurityType ||
+                    this.SecurityType.Equals(input.SecurityType)
+                ) && 
+                (
+                    this.ExecutionDay == input.ExecutionDay ||
+                    this.ExecutionDay.Equals(input.ExecutionDay)
+                ) && 
+                (
+                    this.Price == input.Price ||
+                    this.Price.Equals(input.Price)
+                ) && 
+                (
+                    this.LeavesQty == input.LeavesQty ||
+                    this.LeavesQty.Equals(input.LeavesQty)
+                ) && 
+                (
+                    this.HoldQty == input.HoldQty ||
+                    this.HoldQty.Equals(input.HoldQty)
+                ) && 
+                (
+                    this.Side == input.Side ||
+                    (this.Side != null &&
+                    this.Side.Equals(input.Side))
+                ) && 
+                (
+                    this.Expenses == input.Expenses ||
+                    this.Expenses.Equals(input.Expenses)
+                ) && 
+                (
+                    this.Commission == input.Commission ||
+                    this.Commission.Equals(input.Commission)
+                ) && 
+                (
+                    this.CommissionTax == input.CommissionTax ||
+                    this.CommissionTax.Equals(input.CommissionTax)
+                ) && 
+                (
+                    this.ExpireDay == input.ExpireDay ||
+                    this.ExpireDay.Equals(input.ExpireDay)
+                ) && 
+                (
+                    this.MarginTradeType == input.MarginTradeType ||
+                    this.MarginTradeType.Equals(input.MarginTradeType)
+                ) && 
+                (
+                    this.CurrentPrice == input.CurrentPrice ||
+                    this.CurrentPrice.Equals(input.CurrentPrice)
+                ) && 
+                (
+                    this.Valuation == input.Valuation ||
+                    this.Valuation.Equals(input.Valuation)
+                ) && 
+                (
+                    this.ProfitLoss == input.ProfitLoss ||
+                    this.ProfitLoss.Equals(input.ProfitLoss)
+                ) && 
+                (
+                    this.ProfitLossRate == input.ProfitLossRate ||
+                    this.ProfitLossRate.Equals(input.ProfitLossRate)
+                );
         }
 
         /// <summary>
@@ -92,7 +389,33 @@ namespace Org.OpenAPITools.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = base.GetHashCode();
+                int hashCode = 41;
+                if (this.ExecutionID != null)
+                    hashCode = hashCode * 59 + this.ExecutionID.GetHashCode();
+                hashCode = hashCode * 59 + this.AccountType.GetHashCode();
+                if (this.Symbol != null)
+                    hashCode = hashCode * 59 + this.Symbol.GetHashCode();
+                if (this.SymbolName != null)
+                    hashCode = hashCode * 59 + this.SymbolName.GetHashCode();
+                hashCode = hashCode * 59 + this.Exchange.GetHashCode();
+                if (this.ExchangeName != null)
+                    hashCode = hashCode * 59 + this.ExchangeName.GetHashCode();
+                hashCode = hashCode * 59 + this.SecurityType.GetHashCode();
+                hashCode = hashCode * 59 + this.ExecutionDay.GetHashCode();
+                hashCode = hashCode * 59 + this.Price.GetHashCode();
+                hashCode = hashCode * 59 + this.LeavesQty.GetHashCode();
+                hashCode = hashCode * 59 + this.HoldQty.GetHashCode();
+                if (this.Side != null)
+                    hashCode = hashCode * 59 + this.Side.GetHashCode();
+                hashCode = hashCode * 59 + this.Expenses.GetHashCode();
+                hashCode = hashCode * 59 + this.Commission.GetHashCode();
+                hashCode = hashCode * 59 + this.CommissionTax.GetHashCode();
+                hashCode = hashCode * 59 + this.ExpireDay.GetHashCode();
+                hashCode = hashCode * 59 + this.MarginTradeType.GetHashCode();
+                hashCode = hashCode * 59 + this.CurrentPrice.GetHashCode();
+                hashCode = hashCode * 59 + this.Valuation.GetHashCode();
+                hashCode = hashCode * 59 + this.ProfitLoss.GetHashCode();
+                hashCode = hashCode * 59 + this.ProfitLossRate.GetHashCode();
                 return hashCode;
             }
         }

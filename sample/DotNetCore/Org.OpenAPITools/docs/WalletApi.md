@@ -5,13 +5,13 @@ All URIs are relative to *http://localhost:18080/kabusapi*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**WalletCashGet**](WalletApi.md#walletcashget) | **GET** /wallet/cash | 取引余力（現物）
-[**WalletCashSymbolexchangeGet**](WalletApi.md#walletcashsymbolexchangeget) | **GET** /wallet/cash/{symbol}@{exchange} | 取引余力（現物）（銘柄指定）
+[**WalletCashSymbolGet**](WalletApi.md#walletcashsymbolget) | **GET** /wallet/cash/{symbol} | 取引余力（現物）（銘柄指定）
 [**WalletFutureGet**](WalletApi.md#walletfutureget) | **GET** /wallet/future | 取引余力（先物）
-[**WalletFutureSymbolexchangeGet**](WalletApi.md#walletfuturesymbolexchangeget) | **GET** /wallet/future/{symbol}@{exchange} | 取引余力（先物）（銘柄指定）
+[**WalletFutureSymbolGet**](WalletApi.md#walletfuturesymbolget) | **GET** /wallet/future/{symbol} | 取引余力（先物）（銘柄指定）
 [**WalletMarginGet**](WalletApi.md#walletmarginget) | **GET** /wallet/margin | 取引余力（信用）
-[**WalletMarginSymbolexchangeGet**](WalletApi.md#walletmarginsymbolexchangeget) | **GET** /wallet/margin/{symbol}@{exchange} | 取引余力（信用）（銘柄指定）
+[**WalletMarginSymbolGet**](WalletApi.md#walletmarginsymbolget) | **GET** /wallet/margin/{symbol} | 取引余力（信用）（銘柄指定）
 [**WalletOptionGet**](WalletApi.md#walletoptionget) | **GET** /wallet/option | 取引余力（オプション）
-[**WalletOptionSymbolexchangeGet**](WalletApi.md#walletoptionsymbolexchangeget) | **GET** /wallet/option/{symbol}@{exchange} | 取引余力（オプション）（銘柄指定）
+[**WalletOptionSymbolGet**](WalletApi.md#walletoptionsymbolget) | **GET** /wallet/option/{symbol} | 取引余力（オプション）（銘柄指定）
 
 
 <a name="walletcashget"></a>
@@ -93,9 +93,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="walletcashsymbolexchangeget"></a>
-# **WalletCashSymbolexchangeGet**
-> WalletCashSuccess WalletCashSymbolexchangeGet (string X_API_KEY, string symbol, string exchange)
+<a name="walletcashsymbolget"></a>
+# **WalletCashSymbolGet**
+> WalletCashSuccess WalletCashSymbolGet (string X_API_KEY, string symbol)
 
 取引余力（現物）（銘柄指定）
 
@@ -111,7 +111,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class WalletCashSymbolexchangeGetExample
+    public class WalletCashSymbolGetExample
     {
         public static void Main()
         {
@@ -119,18 +119,17 @@ namespace Example
             config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new WalletApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var symbol = symbol_example;  // string | 銘柄コード
-            var exchange = exchange_example;  // string | 市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>   </tbody> </table>
+            var symbol = symbol_example;  // string | 銘柄コード <br> ※次の形式で入力してください。<br> [銘柄コード]@[市場コード]<br> ※市場コードは下記の定義値から選択してください。  <b>市場コード</b> <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>     <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>   </tbody> </table>
 
             try
             {
                 // 取引余力（現物）（銘柄指定）
-                WalletCashSuccess result = apiInstance.WalletCashSymbolexchangeGet(X_API_KEY, symbol, exchange);
+                WalletCashSuccess result = apiInstance.WalletCashSymbolGet(X_API_KEY, symbol);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WalletApi.WalletCashSymbolexchangeGet: " + e.Message );
+                Debug.Print("Exception when calling WalletApi.WalletCashSymbolGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -144,8 +143,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **symbol** | **string**| 銘柄コード | 
- **exchange** | **string**| 市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;東証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;名証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
+ **symbol** | **string**| 銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;           &lt;td&gt;5&lt;/td&gt;           &lt;td&gt;福証&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;6&lt;/td&gt;           &lt;td&gt;札証&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
 
 ### Return type
 
@@ -255,9 +253,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="walletfuturesymbolexchangeget"></a>
-# **WalletFutureSymbolexchangeGet**
-> WalletFutureSuccess WalletFutureSymbolexchangeGet (string X_API_KEY, string symbol, string exchange)
+<a name="walletfuturesymbolget"></a>
+# **WalletFutureSymbolGet**
+> WalletFutureSuccess WalletFutureSymbolGet (string X_API_KEY, string symbol)
 
 取引余力（先物）（銘柄指定）
 
@@ -273,7 +271,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class WalletFutureSymbolexchangeGetExample
+    public class WalletFutureSymbolGetExample
     {
         public static void Main()
         {
@@ -281,18 +279,17 @@ namespace Example
             config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new WalletApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var symbol = symbol_example;  // string | 銘柄コード
-            var exchange = exchange_example;  // string | 市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
+            var symbol = symbol_example;  // string | 銘柄コード <br> ※次の形式で入力してください。<br> [銘柄コード]@[市場コード]<br> ※市場コードは下記の定義値から選択してください。  <b>市場コード</b> <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
 
             try
             {
                 // 取引余力（先物）（銘柄指定）
-                WalletFutureSuccess result = apiInstance.WalletFutureSymbolexchangeGet(X_API_KEY, symbol, exchange);
+                WalletFutureSuccess result = apiInstance.WalletFutureSymbolGet(X_API_KEY, symbol);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WalletApi.WalletFutureSymbolexchangeGet: " + e.Message );
+                Debug.Print("Exception when calling WalletApi.WalletFutureSymbolGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -306,8 +303,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **symbol** | **string**| 銘柄コード | 
- **exchange** | **string**| 市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
+ **symbol** | **string**| 銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
 
 ### Return type
 
@@ -417,9 +413,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="walletmarginsymbolexchangeget"></a>
-# **WalletMarginSymbolexchangeGet**
-> WalletMarginSuccess WalletMarginSymbolexchangeGet (string X_API_KEY, string symbol, string exchange)
+<a name="walletmarginsymbolget"></a>
+# **WalletMarginSymbolGet**
+> WalletMarginSuccess WalletMarginSymbolGet (string X_API_KEY, string symbol)
 
 取引余力（信用）（銘柄指定）
 
@@ -435,7 +431,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class WalletMarginSymbolexchangeGetExample
+    public class WalletMarginSymbolGetExample
     {
         public static void Main()
         {
@@ -443,18 +439,17 @@ namespace Example
             config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new WalletApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var symbol = symbol_example;  // string | 銘柄コード
-            var exchange = exchange_example;  // string | 市場コード <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>   </tbody> </table>
+            var symbol = symbol_example;  // string | 銘柄コード <br> ※次の形式で入力してください。<br> [銘柄コード]@[市場コード]<br> ※市場コードは下記の定義値から選択してください。  <b>市場コード</b> <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>   </tbody> </table>
 
             try
             {
                 // 取引余力（信用）（銘柄指定）
-                WalletMarginSuccess result = apiInstance.WalletMarginSymbolexchangeGet(X_API_KEY, symbol, exchange);
+                WalletMarginSuccess result = apiInstance.WalletMarginSymbolGet(X_API_KEY, symbol);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WalletApi.WalletMarginSymbolexchangeGet: " + e.Message );
+                Debug.Print("Exception when calling WalletApi.WalletMarginSymbolGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -468,8 +463,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **symbol** | **string**| 銘柄コード | 
- **exchange** | **string**| 市場コード &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
+ **symbol** | **string**| 銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
 
 ### Return type
 
@@ -579,9 +573,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="walletoptionsymbolexchangeget"></a>
-# **WalletOptionSymbolexchangeGet**
-> WalletOptionSuccess WalletOptionSymbolexchangeGet (string X_API_KEY, string symbol, string exchange)
+<a name="walletoptionsymbolget"></a>
+# **WalletOptionSymbolGet**
+> WalletOptionSuccess WalletOptionSymbolGet (string X_API_KEY, string symbol)
 
 取引余力（オプション）（銘柄指定）
 
@@ -597,7 +591,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class WalletOptionSymbolexchangeGetExample
+    public class WalletOptionSymbolGetExample
     {
         public static void Main()
         {
@@ -605,18 +599,17 @@ namespace Example
             config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new WalletApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var symbol = symbol_example;  // string | 銘柄コード
-            var exchange = exchange_example;  // string | 市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
+            var symbol = symbol_example;  // string | 銘柄コード <br> ※次の形式で入力してください。<br> [銘柄コード]@[市場コード]<br> ※市場コードは下記の定義値から選択してください。  <b>市場コード</b> <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
 
             try
             {
                 // 取引余力（オプション）（銘柄指定）
-                WalletOptionSuccess result = apiInstance.WalletOptionSymbolexchangeGet(X_API_KEY, symbol, exchange);
+                WalletOptionSuccess result = apiInstance.WalletOptionSymbolGet(X_API_KEY, symbol);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling WalletApi.WalletOptionSymbolexchangeGet: " + e.Message );
+                Debug.Print("Exception when calling WalletApi.WalletOptionSymbolGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -630,8 +623,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **symbol** | **string**| 銘柄コード | 
- **exchange** | **string**| 市場コード &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
+ **symbol** | **string**| 銘柄コード &lt;br&gt; ※次の形式で入力してください。&lt;br&gt; [銘柄コード]@[市場コード]&lt;br&gt; ※市場コードは下記の定義値から選択してください。  &lt;b&gt;市場コード&lt;/b&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;日通し&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;23&lt;/td&gt;           &lt;td&gt;日中&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;24&lt;/td&gt;           &lt;td&gt;夜間&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | 
 
 ### Return type
 
