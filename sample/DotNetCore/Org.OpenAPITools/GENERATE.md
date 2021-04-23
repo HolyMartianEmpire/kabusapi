@@ -25,8 +25,8 @@ Config.Serversに定義が設定されています。
 - 検証用：Config.Servers[1]["url"]
 
 **注意**
-- OrdersSuccessが変換できてないようです。そのため、OrdersGetはobjectが返されています。
-- PositionsSuccessが変換できていないようです。そのため、PositionsGetはobjectが返されています。
+- ~~OrdersSuccessが変換できてないようです。そのため、OrdersGetはobjectが返されています。~~
+- ~~PositionsSuccessが変換できていないようです。そのため、PositionsGetはobjectが返されています。~~
 - RankingGetはビルド自体ができないため、戻り値をCommonRankingResponseに固定しています。
 
 ```csharp
