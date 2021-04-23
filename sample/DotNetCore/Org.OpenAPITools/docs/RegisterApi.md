@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 銘柄登録
 
-PUSH配信する銘柄を登録します
+PUSH配信する銘柄を登録します。<br> API登録銘柄リストを開くには、kabuステーションAPIインジケーターを右クリックし「API登録銘柄リスト」を選択してください。
 
 ### Example
 ```csharp
@@ -171,7 +171,7 @@ No authorization required
 
 <a name="unregisterput"></a>
 # **UnregisterPut**
-> RegistSuccess UnregisterPut (string X_API_KEY, RequestRegister requestRegister)
+> RegistSuccess UnregisterPut (string X_API_KEY, RequestUnregister requestUnregister)
 
 銘柄登録解除
 
@@ -195,12 +195,12 @@ namespace Example
             config.BasePath = "http://localhost:18080/kabusapi";
             var apiInstance = new RegisterApi(config);
             var X_API_KEY = X_API_KEY_example;  // string | トークン発行メソッドで取得した文字列
-            var requestRegister = new RequestRegister(); // RequestRegister | 登録解除する銘柄のリスト
+            var requestUnregister = new RequestUnregister(); // RequestUnregister | 登録解除する銘柄のリスト
 
             try
             {
                 // 銘柄登録解除
-                RegistSuccess result = apiInstance.UnregisterPut(X_API_KEY, requestRegister);
+                RegistSuccess result = apiInstance.UnregisterPut(X_API_KEY, requestUnregister);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -219,7 +219,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **string**| トークン発行メソッドで取得した文字列 | 
- **requestRegister** | [**RequestRegister**](RequestRegister.md)| 登録解除する銘柄のリスト | 
+ **requestUnregister** | [**RequestUnregister**](RequestUnregister.md)| 登録解除する銘柄のリスト | 
 
 ### Return type
 

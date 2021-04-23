@@ -20,10 +20,10 @@ Name | Type | Description | Notes
 **CommissionTax** | **double** | 手数料消費税&lt;br&gt;※信用・先物・オプションの場合のみ | [optional] 
 **ExpireDay** | **int** | 返済期日&lt;br&gt;※信用・先物・オプションの場合のみ | [optional] 
 **MarginTradeType** | **int** | 信用取引区分&lt;br&gt;※信用の場合のみ &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;制度信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;一般信用&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;一般信用（売短）&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | [optional] 
-**CurrentPrice** | **double** | 現在値 | [optional] 
-**Valuation** | **double** | 評価金額 | [optional] 
-**ProfitLoss** | **double** | 評価損益額 | [optional] 
-**ProfitLossRate** | **double** | 評価損益率 | [optional] 
+**CurrentPrice** | **double** | 現在値&lt;br&gt;追加情報出力フラグ：falseの場合、null | [optional] 
+**Valuation** | **double** | 評価金額&lt;br&gt;追加情報出力フラグ：falseの場合、null | [optional] 
+**ProfitLoss** | **double** | 評価損益額&lt;br&gt;追加情報出力フラグ：falseの場合、null | [optional] 
+**ProfitLossRate** | **double** | 評価損益率&lt;br&gt;追加情報出力フラグ：falseの場合、null | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
